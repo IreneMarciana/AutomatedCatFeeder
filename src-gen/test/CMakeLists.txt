@@ -36,7 +36,6 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 # Do not clear runtime path of the executable when installing it
 SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
-set(CMAKE_SYSTEM_NAME Linux)
 
 # Set default values for build parameters
 set(LF_REACTION_GRAPH_BREADTH 1 CACHE STRING "")

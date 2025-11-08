@@ -227,29 +227,29 @@ __/low_level_platform/impl/src/lf_atomic_gcc_clang.c.s:
 	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build && $(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-low-level-platform-impl.dir/build.make core/CMakeFiles/lf-low-level-platform-impl.dir/__/low_level_platform/impl/src/lf_atomic_gcc_clang.c.s
 .PHONY : __/low_level_platform/impl/src/lf_atomic_gcc_clang.c.s
 
-__/low_level_platform/impl/src/lf_linux_support.o: __/low_level_platform/impl/src/lf_linux_support.c.o
-.PHONY : __/low_level_platform/impl/src/lf_linux_support.o
+__/low_level_platform/impl/src/lf_macos_support.o: __/low_level_platform/impl/src/lf_macos_support.c.o
+.PHONY : __/low_level_platform/impl/src/lf_macos_support.o
 
 # target to build an object file
-__/low_level_platform/impl/src/lf_linux_support.c.o:
-	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build && $(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-low-level-platform-impl.dir/build.make core/CMakeFiles/lf-low-level-platform-impl.dir/__/low_level_platform/impl/src/lf_linux_support.c.o
-.PHONY : __/low_level_platform/impl/src/lf_linux_support.c.o
+__/low_level_platform/impl/src/lf_macos_support.c.o:
+	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build && $(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-low-level-platform-impl.dir/build.make core/CMakeFiles/lf-low-level-platform-impl.dir/__/low_level_platform/impl/src/lf_macos_support.c.o
+.PHONY : __/low_level_platform/impl/src/lf_macos_support.c.o
 
-__/low_level_platform/impl/src/lf_linux_support.i: __/low_level_platform/impl/src/lf_linux_support.c.i
-.PHONY : __/low_level_platform/impl/src/lf_linux_support.i
+__/low_level_platform/impl/src/lf_macos_support.i: __/low_level_platform/impl/src/lf_macos_support.c.i
+.PHONY : __/low_level_platform/impl/src/lf_macos_support.i
 
 # target to preprocess a source file
-__/low_level_platform/impl/src/lf_linux_support.c.i:
-	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build && $(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-low-level-platform-impl.dir/build.make core/CMakeFiles/lf-low-level-platform-impl.dir/__/low_level_platform/impl/src/lf_linux_support.c.i
-.PHONY : __/low_level_platform/impl/src/lf_linux_support.c.i
+__/low_level_platform/impl/src/lf_macos_support.c.i:
+	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build && $(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-low-level-platform-impl.dir/build.make core/CMakeFiles/lf-low-level-platform-impl.dir/__/low_level_platform/impl/src/lf_macos_support.c.i
+.PHONY : __/low_level_platform/impl/src/lf_macos_support.c.i
 
-__/low_level_platform/impl/src/lf_linux_support.s: __/low_level_platform/impl/src/lf_linux_support.c.s
-.PHONY : __/low_level_platform/impl/src/lf_linux_support.s
+__/low_level_platform/impl/src/lf_macos_support.s: __/low_level_platform/impl/src/lf_macos_support.c.s
+.PHONY : __/low_level_platform/impl/src/lf_macos_support.s
 
 # target to generate assembly for a file
-__/low_level_platform/impl/src/lf_linux_support.c.s:
-	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build && $(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-low-level-platform-impl.dir/build.make core/CMakeFiles/lf-low-level-platform-impl.dir/__/low_level_platform/impl/src/lf_linux_support.c.s
-.PHONY : __/low_level_platform/impl/src/lf_linux_support.c.s
+__/low_level_platform/impl/src/lf_macos_support.c.s:
+	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build && $(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-low-level-platform-impl.dir/build.make core/CMakeFiles/lf-low-level-platform-impl.dir/__/low_level_platform/impl/src/lf_macos_support.c.s
+.PHONY : __/low_level_platform/impl/src/lf_macos_support.c.s
 
 __/low_level_platform/impl/src/lf_platform_util.o: __/low_level_platform/impl/src/lf_platform_util.c.o
 .PHONY : __/low_level_platform/impl/src/lf_platform_util.o
@@ -704,9 +704,9 @@ help:
 	@echo "... __/low_level_platform/impl/src/lf_atomic_gcc_clang.o"
 	@echo "... __/low_level_platform/impl/src/lf_atomic_gcc_clang.i"
 	@echo "... __/low_level_platform/impl/src/lf_atomic_gcc_clang.s"
-	@echo "... __/low_level_platform/impl/src/lf_linux_support.o"
-	@echo "... __/low_level_platform/impl/src/lf_linux_support.i"
-	@echo "... __/low_level_platform/impl/src/lf_linux_support.s"
+	@echo "... __/low_level_platform/impl/src/lf_macos_support.o"
+	@echo "... __/low_level_platform/impl/src/lf_macos_support.i"
+	@echo "... __/low_level_platform/impl/src/lf_macos_support.s"
 	@echo "... __/low_level_platform/impl/src/lf_platform_util.o"
 	@echo "... __/low_level_platform/impl/src/lf_platform_util.i"
 	@echo "... __/low_level_platform/impl/src/lf_platform_util.s"

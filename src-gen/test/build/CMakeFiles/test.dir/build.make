@@ -76,43 +76,43 @@ CMakeFiles/test.dir/lib/schedule.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/lib/schedule.c.o: /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/lib/schedule.c
 CMakeFiles/test.dir/lib/schedule.c.o: CMakeFiles/test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test.dir/lib/schedule.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/lib/schedule.c.o -MF CMakeFiles/test.dir/lib/schedule.c.o.d -o CMakeFiles/test.dir/lib/schedule.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/lib/schedule.c
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/lib/schedule.c.o -MF CMakeFiles/test.dir/lib/schedule.c.o.d -o CMakeFiles/test.dir/lib/schedule.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/lib/schedule.c
 
 CMakeFiles/test.dir/lib/schedule.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/lib/schedule.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/lib/schedule.c > CMakeFiles/test.dir/lib/schedule.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/lib/schedule.c > CMakeFiles/test.dir/lib/schedule.c.i
 
 CMakeFiles/test.dir/lib/schedule.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/lib/schedule.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/lib/schedule.c -o CMakeFiles/test.dir/lib/schedule.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/lib/schedule.c -o CMakeFiles/test.dir/lib/schedule.c.s
 
 CMakeFiles/test.dir/_test_main.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/_test_main.c.o: /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/_test_main.c
 CMakeFiles/test.dir/_test_main.c.o: CMakeFiles/test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test.dir/_test_main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/_test_main.c.o -MF CMakeFiles/test.dir/_test_main.c.o.d -o CMakeFiles/test.dir/_test_main.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/_test_main.c
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/_test_main.c.o -MF CMakeFiles/test.dir/_test_main.c.o.d -o CMakeFiles/test.dir/_test_main.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/_test_main.c
 
 CMakeFiles/test.dir/_test_main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/_test_main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/_test_main.c > CMakeFiles/test.dir/_test_main.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/_test_main.c > CMakeFiles/test.dir/_test_main.c.i
 
 CMakeFiles/test.dir/_test_main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/_test_main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/_test_main.c -o CMakeFiles/test.dir/_test_main.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/_test_main.c -o CMakeFiles/test.dir/_test_main.c.s
 
 CMakeFiles/test.dir/test.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test.c.o: /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/test.c
 CMakeFiles/test.dir/test.c.o: CMakeFiles/test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test.dir/test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/test.c.o -MF CMakeFiles/test.dir/test.c.o.d -o CMakeFiles/test.dir/test.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/test.c
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/test.c.o -MF CMakeFiles/test.dir/test.c.o.d -o CMakeFiles/test.dir/test.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/test.c
 
 CMakeFiles/test.dir/test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/test.c > CMakeFiles/test.dir/test.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/test.c > CMakeFiles/test.dir/test.c.i
 
 CMakeFiles/test.dir/test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/test.c -o CMakeFiles/test.dir/test.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/test.c -o CMakeFiles/test.dir/test.c.s
 
 # Object files for target test
 test_OBJECTS = \
@@ -127,7 +127,7 @@ test: CMakeFiles/test.dir/lib/schedule.c.o
 test: CMakeFiles/test.dir/_test_main.c.o
 test: CMakeFiles/test.dir/test.c.o
 test: CMakeFiles/test.dir/build.make
-test: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libm.tbd
+test: /nix/store/ybygcq3s191f07bwgxbqpgqv0ak4h17k-apple-sdk-11.3/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libm.tbd
 test: core/libreactor-c.a
 test: core/liblf-low-level-platform-impl.a
 test: core/liblf-platform-impl.a

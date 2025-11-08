@@ -76,15 +76,15 @@ core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o: core/CMakeFi
 core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o: /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/platform/impl/platform.c
 core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o: core/CMakeFiles/lf-platform-impl.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o"
-	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/core && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o -MF CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o.d -o CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/platform/impl/platform.c
+	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/core && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o -MF CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o.d -o CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.o -c /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/platform/impl/platform.c
 
 core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.i"
-	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/core && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/platform/impl/platform.c > CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.i
+	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/core && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/platform/impl/platform.c > CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.i
 
 core/CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.s"
-	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/core && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/platform/impl/platform.c -o CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.s
+	cd /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/core && /usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/platform/impl/platform.c -o CMakeFiles/lf-platform-impl.dir/__/platform/impl/platform.c.s
 
 # Object files for target lf-platform-impl
 lf__platform__impl_OBJECTS = \
