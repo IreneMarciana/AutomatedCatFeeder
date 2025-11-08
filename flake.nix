@@ -1,37 +1,39 @@
 {
-  description = "Automated Cat Feeder Development Environment";
+  description = "Raspberry Pi 3 Cross-Compilation Environment";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
   outputs = { self, nixpkgs }: 
     let
-      # Detect system automatically
-      system = "aarch64-darwin"; # This will be auto-detected, but explicit for clarity
-      
+      system = "aarch64-darwin"; # Your macOS system
       pkgs = nixpkgs.legacyPackages.${system};
+      
+      # Cross-compilation toolchain for Raspberry Pi 3 (ARMv7)
+      raspberrypiToolchain = pkgs.pkgsCross.armv7l-hf-multiplatform;
+      
     in {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          gcc-arm-embedded
+          # Cross-compilation tools
+          raspberrypiToolchain.stdenv.cc
           cmake
-          python3
-          picotool
-          openocd
-          # Add any other RP2040 dependencies you need
+          pkg-config
+          
+          # Libraries that might be needed
+          raspberrypiToolchain.glibc
         ];
         
         shellHook = ''
-          echo "=== RP2040/Raspberry Pi Pico Development Environment ==="
-          echo "ARM GCC: $(arm-none-eabi-gcc --version | head -n1)"
-          echo "CMake: $(cmake --version | head -n1)"
+          echo "=== Raspberry Pi 3 Cross-Compilation Environment ==="
+          echo "Cross-compiler: $(armv7l-unknown-linux-gnueabihf-gcc --version | head -n1)"
           
-          # Fix for CMake on macOS with ARM embedded compiler
-          export CMAKE_OSX_ARCHITECTURES=""
-          export CMAKE_OSX_DEPLOYMENT_TARGET=""
+          # Set up cross-compilation environment
+          export CC=armv7l-unknown-linux-gnueabihf-gcc
+          export CXX=armv7l-unknown-linux-gnueabihf-g++
           
-          echo "Environment ready for Pi development"
+          echo "Ready to cross-compile for Raspberry Pi 3"
         '';
       };
     };
