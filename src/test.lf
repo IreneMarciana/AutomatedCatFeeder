@@ -17,11 +17,11 @@ main reactor {
     state led_on: bool = false
 
     reaction(startup) {=
-        printf("Starting LED blink example on Raspberry Pi 3.\n");
+        printf("Hello world from Raspberry Pi 3.\n");
     =}
 
-    reaction(t) {=
-        self->led_on = !self->led_on;
+    /*reaction(t) {=
+        //self->led_on = !self->led_on;
         printf("LED State: %d\n", self->led_on);
 
         // Example: toggle GPIO pin 17 (physical pin 11)
@@ -31,7 +31,7 @@ main reactor {
         gpiod_line_set_value(line, self->led_on);
         gpiod_line_release(line);
         gpiod_chip_close(chip);
-    =}
+    =}*/
 
     /*reaction(startup) {=
         gpio_init(PICO_DEFAULT_LED_PIN);
