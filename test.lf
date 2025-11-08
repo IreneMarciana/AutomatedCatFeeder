@@ -1,0 +1,46 @@
+target C {
+  platform: {
+    name: "linux"#,
+    #board: "raspberry-pi-pico"
+  },
+  single-threaded: true
+}
+
+preamble {=
+  #include <stdio.h>
+  #include <unistd.h>
+  #include <gpiod.h>
+=}
+
+main reactor {
+    timer t(0, 250 ms)
+    state led_on: bool = false
+
+    reaction(startup) {=
+        printf("Starting LED blink example on Raspberry Pi 3.\n");
+    =}
+
+    reaction(t) {=
+        self->led_on = !self->led_on;
+        printf("LED State: %d\n", self->led_on);
+
+        // Example: toggle GPIO pin 17 (physical pin 11)
+        struct gpiod_chip *chip = gpiod_chip_open_by_name("gpiochip0");
+        struct gpiod_line *line = gpiod_chip_get_line(chip, 17);
+        gpiod_line_request_output(line, "lf-blink", self->led_on);
+        gpiod_line_set_value(line, self->led_on);
+        gpiod_line_release(line);
+        gpiod_chip_close(chip);
+    =}
+
+    /*reaction(startup) {=
+        gpio_init(PICO_DEFAULT_LED_PIN);
+        gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+    =}
+
+    reaction(t) {=
+        self->led_on = !self->led_on;
+        printf("LED State: %b\n", self->led_on);
+        gpio_put(PICO_DEFAULT_LED_PIN, !self->led_on);
+    =}*/
+}
