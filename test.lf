@@ -4,7 +4,6 @@ target C{
 
 preamble {=
   #include <stdio.h>
-  #include <gpiod.h>
 =}
 
 main reactor{
