@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/cmake_install.cmake",
-		"/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/core/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
