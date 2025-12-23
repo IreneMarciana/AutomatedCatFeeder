@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/reactor-c.dir/__/platform/impl/platform.c.o"
+  "CMakeFiles/reactor-c.dir/__/platform/impl/platform.c.o.d"
+  "CMakeFiles/reactor-c.dir/clock.c.o"
+  "CMakeFiles/reactor-c.dir/clock.c.o.d"
+  "CMakeFiles/reactor-c.dir/environment.c.o"
+  "CMakeFiles/reactor-c.dir/environment.c.o.d"
+  "CMakeFiles/reactor-c.dir/lf_token.c.o"
+  "CMakeFiles/reactor-c.dir/lf_token.c.o.d"
+  "CMakeFiles/reactor-c.dir/mixed_radix.c.o"
+  "CMakeFiles/reactor-c.dir/mixed_radix.c.o.d"
+  "CMakeFiles/reactor-c.dir/port.c.o"
+  "CMakeFiles/reactor-c.dir/port.c.o.d"
+  "CMakeFiles/reactor-c.dir/reactor.c.o"
+  "CMakeFiles/reactor-c.dir/reactor.c.o.d"
+  "CMakeFiles/reactor-c.dir/reactor_common.c.o"
+  "CMakeFiles/reactor-c.dir/reactor_common.c.o.d"
+  "CMakeFiles/reactor-c.dir/tag.c.o"
+  "CMakeFiles/reactor-c.dir/tag.c.o.d"
+  "CMakeFiles/reactor-c.dir/utils/hashset/hashset.c.o"
+  "CMakeFiles/reactor-c.dir/utils/hashset/hashset.c.o.d"
+  "CMakeFiles/reactor-c.dir/utils/hashset/hashset_itr.c.o"
+  "CMakeFiles/reactor-c.dir/utils/hashset/hashset_itr.c.o.d"
+  "CMakeFiles/reactor-c.dir/utils/pqueue.c.o"
+  "CMakeFiles/reactor-c.dir/utils/pqueue.c.o.d"
+  "CMakeFiles/reactor-c.dir/utils/pqueue_base.c.o"
+  "CMakeFiles/reactor-c.dir/utils/pqueue_base.c.o.d"
+  "CMakeFiles/reactor-c.dir/utils/pqueue_tag.c.o"
+  "CMakeFiles/reactor-c.dir/utils/pqueue_tag.c.o.d"
+  "CMakeFiles/reactor-c.dir/utils/util.c.o"
+  "CMakeFiles/reactor-c.dir/utils/util.c.o.d"
+  "CMakeFiles/reactor-c.dir/utils/vector.c.o"
+  "CMakeFiles/reactor-c.dir/utils/vector.c.o.d"
+  "libreactor-c.a"
+  "libreactor-c.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/reactor-c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
