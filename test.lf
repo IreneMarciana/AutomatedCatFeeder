@@ -1,0 +1,21 @@
+target C{
+    single-threaded: true
+}
+
+preamble {=
+  #include <stdio.h>
+  #include <gpiod.h>
+=}
+
+main reactor{
+    timer t(0, 250 ms);
+
+    reaction(startup) {=
+        printf("initializing Raspberry Pi 4.\n");
+    =}
+
+    reaction(t){=
+        printf("hello Raspberry Pi 4!\n");
+    =}
+
+}
