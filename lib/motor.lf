@@ -27,10 +27,14 @@ main reactor{
         HR8825_SelectMotor(MOTOR2);
         HR8825_SetMicroStep(SOFTWARD, "fullstep");
         // BACKWARD/FORWARD, steps, speed
-        HR8825_TurnStep(BACKWARD, 6000, 1);
+        HR8825_TurnStep(BACKWARD, 2048, 1);
         HR8825_Stop();
-        //HR8825_TurnStep(BACKWARD, 2048, 4);
-        //HR8825_Stop();
+
+        
+        HR8825_SetMicroStep(SOFTWARD, "1/32step");
+        // BACKWARD/FORWARD, steps, speed
+        HR8825_TurnStep(BACKWARD, 2048, 1);
+        HR8825_Stop();
     =}
 
     reaction(shutdown) {=
