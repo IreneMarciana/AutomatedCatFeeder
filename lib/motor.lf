@@ -17,6 +17,20 @@ preamble {=
 main reactor{
 
     reaction(startup) {=
+
+        void  Handler(int signo)
+        {
+            //System Exit
+            printf("\r\nHandler:Motor Stop\r\n");
+            HR8825_SelectMotor(MOTOR1);
+            HR8825_Stop();
+            HR8825_SelectMotor(MOTOR2);
+            HR8825_Stop();
+            DEV_ModuleExit();
+
+            exit(0);
+        }
+
         if (DEV_ModuleInit())
             exit(0);
         
