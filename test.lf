@@ -1,3 +1,9 @@
+# stepper test
+# pressure plate test
+
+# camera test
+# wifi test/notif test
+
 target C{
     single-threaded: true
 }
@@ -7,6 +13,7 @@ preamble {=
 =}
 
 main reactor{
+    stepper = new Stepper();
     timer t(0, 250 ms);
 
     reaction(startup) {=
@@ -18,3 +25,12 @@ main reactor{
     =}
 
 }
+
+reactor Stepper{
+    input speed: float
+
+
+
+    
+}
+

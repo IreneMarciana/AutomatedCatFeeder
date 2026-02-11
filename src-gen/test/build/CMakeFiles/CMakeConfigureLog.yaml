@@ -25,8 +25,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -40,16 +40,16 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/Users/irene/.pyenv/shims/uname"
       - "/Users/irene/.local/bin/uname"
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/uname"
       - "/Users/irene/.rbenv/shims/uname"
       - "/Users/irene/.rbenv/bin/uname"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/uname"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/uname"
+      - "/Users/irene/.nix-profile/bin/uname"
+      - "/nix/var/nix/profiles/default/bin/uname"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/uname"
       - "/opt/homebrew/bin/uname"
       - "/opt/homebrew/sbin/uname"
@@ -63,8 +63,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -82,12 +82,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "message-v1"
@@ -122,8 +116,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -137,16 +131,16 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/Users/irene/.pyenv/shims/gmake"
       - "/Users/irene/.local/bin/gmake"
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/gmake"
       - "/Users/irene/.rbenv/shims/gmake"
       - "/Users/irene/.rbenv/bin/gmake"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
+      - "/Users/irene/.nix-profile/bin/gmake"
+      - "/nix/var/nix/profiles/default/bin/gmake"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/gmake"
       - "/opt/homebrew/bin/gmake"
       - "/opt/homebrew/sbin/gmake"
@@ -160,15 +154,15 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/gmake"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/gmake"
       - "/Library/Apple/usr/bin/gmake"
-      - "/Users/irene/.nix-profile/bin/gmake"
-      - "/nix/var/nix/profiles/default/bin/gmake"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
       - "/Users/irene/.pyenv/shims/make"
       - "/Users/irene/.local/bin/make"
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/make"
       - "/Users/irene/.rbenv/shims/make"
       - "/Users/irene/.rbenv/bin/make"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/make"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/make"
+      - "/Users/irene/.nix-profile/bin/make"
+      - "/nix/var/nix/profiles/default/bin/make"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/make"
       - "/opt/homebrew/bin/make"
       - "/opt/homebrew/sbin/make"
@@ -182,8 +176,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -201,12 +195,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -239,8 +227,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -254,16 +242,16 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/Users/irene/.pyenv/shims/cc"
       - "/Users/irene/.local/bin/cc"
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/cc"
       - "/Users/irene/.rbenv/shims/cc"
       - "/Users/irene/.rbenv/bin/cc"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/cc"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/cc"
+      - "/Users/irene/.nix-profile/bin/cc"
+      - "/nix/var/nix/profiles/default/bin/cc"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/cc"
       - "/opt/homebrew/bin/cc"
       - "/opt/homebrew/sbin/cc"
@@ -277,8 +265,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -296,12 +284,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -335,8 +317,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -354,12 +336,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "message-v1"
@@ -440,8 +416,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -454,8 +430,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
@@ -464,8 +440,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -483,12 +459,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -516,8 +486,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -530,8 +500,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
@@ -540,8 +510,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -559,12 +529,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -592,8 +556,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -606,8 +570,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
@@ -616,8 +580,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -635,12 +599,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -668,8 +626,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -682,8 +640,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
@@ -692,8 +650,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -711,12 +669,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -744,8 +696,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -758,8 +710,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
@@ -768,8 +720,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -787,12 +739,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -820,8 +766,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -834,8 +780,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
@@ -844,8 +790,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -863,12 +809,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -896,8 +836,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -910,8 +850,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/usr/bin/objcopy"
       - "/Users/irene/.pyenv/shims/objcopy"
@@ -919,8 +859,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/objcopy"
       - "/Users/irene/.rbenv/shims/objcopy"
       - "/Users/irene/.rbenv/bin/objcopy"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/objcopy"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/objcopy"
+      - "/Users/irene/.nix-profile/bin/objcopy"
+      - "/nix/var/nix/profiles/default/bin/objcopy"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/objcopy"
       - "/opt/homebrew/bin/objcopy"
       - "/opt/homebrew/sbin/objcopy"
@@ -933,8 +873,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/objcopy"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/objcopy"
       - "/Library/Apple/usr/bin/objcopy"
-      - "/Users/irene/.nix-profile/bin/objcopy"
-      - "/nix/var/nix/profiles/default/bin/objcopy"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/objcopy"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/objcopy"
     found: false
     search_context:
       ENV{PATH}:
@@ -943,8 +883,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -962,12 +902,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -995,8 +929,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1009,8 +943,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/usr/bin/readelf"
       - "/Users/irene/.pyenv/shims/readelf"
@@ -1018,8 +952,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/readelf"
       - "/Users/irene/.rbenv/shims/readelf"
       - "/Users/irene/.rbenv/bin/readelf"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf"
+      - "/Users/irene/.nix-profile/bin/readelf"
+      - "/nix/var/nix/profiles/default/bin/readelf"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/readelf"
       - "/opt/homebrew/bin/readelf"
       - "/opt/homebrew/sbin/readelf"
@@ -1032,8 +966,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/readelf"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/readelf"
       - "/Library/Apple/usr/bin/readelf"
-      - "/Users/irene/.nix-profile/bin/readelf"
-      - "/nix/var/nix/profiles/default/bin/readelf"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf"
     found: false
     search_context:
       ENV{PATH}:
@@ -1042,8 +976,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -1061,12 +995,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -1094,8 +1022,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1108,8 +1036,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/usr/bin/dlltool"
       - "/Users/irene/.pyenv/shims/dlltool"
@@ -1117,8 +1045,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/dlltool"
       - "/Users/irene/.rbenv/shims/dlltool"
       - "/Users/irene/.rbenv/bin/dlltool"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
+      - "/Users/irene/.nix-profile/bin/dlltool"
+      - "/nix/var/nix/profiles/default/bin/dlltool"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/dlltool"
       - "/opt/homebrew/bin/dlltool"
       - "/opt/homebrew/sbin/dlltool"
@@ -1131,8 +1059,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dlltool"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
       - "/Library/Apple/usr/bin/dlltool"
-      - "/Users/irene/.nix-profile/bin/dlltool"
-      - "/nix/var/nix/profiles/default/bin/dlltool"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
     found: false
     search_context:
       ENV{PATH}:
@@ -1141,8 +1069,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -1160,12 +1088,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -1193,8 +1115,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1207,8 +1129,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/usr/bin/addr2line"
       - "/Users/irene/.pyenv/shims/addr2line"
@@ -1216,8 +1138,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/addr2line"
       - "/Users/irene/.rbenv/shims/addr2line"
       - "/Users/irene/.rbenv/bin/addr2line"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/addr2line"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/addr2line"
+      - "/Users/irene/.nix-profile/bin/addr2line"
+      - "/nix/var/nix/profiles/default/bin/addr2line"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/addr2line"
       - "/opt/homebrew/bin/addr2line"
       - "/opt/homebrew/sbin/addr2line"
@@ -1230,8 +1152,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/addr2line"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/addr2line"
       - "/Library/Apple/usr/bin/addr2line"
-      - "/Users/irene/.nix-profile/bin/addr2line"
-      - "/nix/var/nix/profiles/default/bin/addr2line"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/addr2line"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/addr2line"
     found: false
     search_context:
       ENV{PATH}:
@@ -1240,8 +1162,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -1259,12 +1181,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -1292,8 +1208,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1306,8 +1222,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/usr/bin/tapi"
       - "/Users/irene/.pyenv/shims/tapi"
@@ -1315,8 +1231,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/tapi"
       - "/Users/irene/.rbenv/shims/tapi"
       - "/Users/irene/.rbenv/bin/tapi"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
+      - "/Users/irene/.nix-profile/bin/tapi"
+      - "/nix/var/nix/profiles/default/bin/tapi"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/tapi"
       - "/opt/homebrew/bin/tapi"
       - "/opt/homebrew/sbin/tapi"
@@ -1329,8 +1245,8 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
       - "/Library/Apple/usr/bin/tapi"
-      - "/Users/irene/.nix-profile/bin/tapi"
-      - "/nix/var/nix/profiles/default/bin/tapi"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -1339,8 +1255,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -1358,12 +1274,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "find-v1"
@@ -1390,8 +1300,8 @@ events:
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
       - "/Users/irene/.rbenv/bin/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Users/irene/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1405,16 +1315,16 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Users/irene/.nix-profile/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     searched_directories:
       - "/Users/irene/.pyenv/shims/install_name_tool"
       - "/Users/irene/.local/bin/install_name_tool"
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/install_name_tool"
       - "/Users/irene/.rbenv/shims/install_name_tool"
       - "/Users/irene/.rbenv/bin/install_name_tool"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/install_name_tool"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/install_name_tool"
+      - "/Users/irene/.nix-profile/bin/install_name_tool"
+      - "/nix/var/nix/profiles/default/bin/install_name_tool"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/install_name_tool"
       - "/opt/homebrew/bin/install_name_tool"
       - "/opt/homebrew/sbin/install_name_tool"
@@ -1428,8 +1338,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -1447,12 +1357,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
   -
     kind: "try_compile-v1"
@@ -1463,8 +1367,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd"
-      binary: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd"
+      source: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG"
+      binary: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1476,18 +1380,18 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd'
+        Change Dir: '/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_56f67/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_56f67.dir/build.make CMakeFiles/cmTC_56f67.dir/build
-        Building C object CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_36a3f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_36a3f.dir/build.make CMakeFiles/cmTC_36a3f.dir/build
+        Building C object CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 16.0.0 (clang-1600.0.26.3)
         Target: arm64-apple-darwin23.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.0 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.0 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 16.0.0 (clang-1600.0.26.3) default target arm64-apple-darwin23.6.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -1499,13 +1403,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_56f67
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56f67.dir/link.txt --verbose=1
+        Linking C executable cmTC_36a3f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36a3f.dir/link.txt --verbose=1
         Apple clang version 16.0.0 (clang-1600.0.26.3)
         Target: arm64-apple-darwin23.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_56f67 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_36a3f -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1115.7.3
         BUILD 13:29:00 Aug  9 2024
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1517,7 +1421,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -o cmTC_56f67
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -o cmTC_36a3f
         
       exitCode: 0
   -
@@ -1559,18 +1463,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd']
+        ignore line: [Change Dir: '/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_56f67/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_56f67.dir/build.make CMakeFiles/cmTC_56f67.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_36a3f/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_36a3f.dir/build.make CMakeFiles/cmTC_36a3f.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.3)]
         ignore line: [Target: arm64-apple-darwin23.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.0 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-3UiUHd -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.0 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder/src-gen/test/build/CMakeFiles/CMakeScratch/TryCompile-Y9vYtG -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.3) default target arm64-apple-darwin23.6.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1582,13 +1486,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_56f67]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56f67.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_36a3f]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36a3f.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.3)]
         ignore line: [Target: arm64-apple-darwin23.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_56f67 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_36a3f -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1605,12 +1509,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_56f67] ==> ignore
+          arg [cmTC_36a3f] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_56f67.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_36a3f.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
         linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -1646,7 +1550,7 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "CMakeLists.txt:58 (find_library)"
+      - "CMakeLists.txt:59 (find_library)"
     mode: "library"
     variable: "MATH_LIBRARY"
     description: "Path to a library."
@@ -1665,8 +1569,7 @@ events:
       - "/Users/irene/.local/bin/"
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1677,7 +1580,8 @@ events:
       - "/usr/sbin/"
       - "/sbin/"
       - "/Library/Apple/usr/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/lib/"
@@ -1698,8 +1602,7 @@ events:
       - "/Users/irene/.local/bin/"
       - "/Users/irene/.nvm/versions/node/v22.12.0/bin/"
       - "/Users/irene/.rbenv/shims/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/nix/var/nix/profiles/default/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1710,7 +1613,8 @@ events:
       - "/usr/sbin/"
       - "/sbin/"
       - "/Library/Apple/usr/bin/"
-      - "/nix/var/nix/profiles/default/bin/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libm.tbd"
     search_context:
       ENV{PATH}:
@@ -1719,8 +1623,8 @@ events:
         - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
         - "/Users/irene/.rbenv/shims"
         - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Users/irene/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/Users/irene/.rbenv/shims"
         - "/opt/homebrew/bin"
@@ -1738,12 +1642,6 @@ events:
         - "/Library/Apple/usr/bin"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Users/irene/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/Users/irene/.local/bin"
-        - "/Users/irene/.nvm/versions/node/v22.12.0/bin"
-        - "/Users/irene/.rbenv/shims"
-        - "/Users/irene/.rbenv/bin"
-        - "/Users/irene/.nix-profile/bin"
-        - "/nix/var/nix/profiles/default/bin"
       CMAKE_INSTALL_PREFIX: "/Users/irene/Downloads/AppliedProject/AutomatedCatFeeder"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"

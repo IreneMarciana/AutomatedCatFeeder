@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test.dir/_stepper.c.o"
+  "CMakeFiles/test.dir/_stepper.c.o.d"
   "CMakeFiles/test.dir/_test_main.c.o"
   "CMakeFiles/test.dir/_test_main.c.o.d"
   "CMakeFiles/test.dir/lib/schedule.c.o"

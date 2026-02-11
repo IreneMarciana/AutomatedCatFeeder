@@ -213,6 +213,30 @@ lf-platform-impl/fast:
 	$(MAKE) $(MAKESILENT) -f core/CMakeFiles/lf-platform-impl.dir/build.make core/CMakeFiles/lf-platform-impl.dir/build
 .PHONY : lf-platform-impl/fast
 
+_stepper.o: _stepper.c.o
+.PHONY : _stepper.o
+
+# target to build an object file
+_stepper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/_stepper.c.o
+.PHONY : _stepper.c.o
+
+_stepper.i: _stepper.c.i
+.PHONY : _stepper.i
+
+# target to preprocess a source file
+_stepper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/_stepper.c.i
+.PHONY : _stepper.c.i
+
+_stepper.s: _stepper.c.s
+.PHONY : _stepper.s
+
+# target to generate assembly for a file
+_stepper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/_stepper.c.s
+.PHONY : _stepper.c.s
+
 _test_main.o: _test_main.c.o
 .PHONY : _test_main.o
 
@@ -301,6 +325,9 @@ help:
 	@echo "... lf-platform-impl"
 	@echo "... reactor-c"
 	@echo "... test"
+	@echo "... _stepper.o"
+	@echo "... _stepper.i"
+	@echo "... _stepper.s"
 	@echo "... _test_main.o"
 	@echo "... _test_main.i"
 	@echo "... _test_main.s"

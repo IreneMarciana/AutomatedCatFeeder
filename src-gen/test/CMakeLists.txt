@@ -52,6 +52,7 @@ add_executable(
     ${LF_MAIN_TARGET}
     lib/schedule.c
     _test_main.c
+    _stepper.c
     test.c
 )
 

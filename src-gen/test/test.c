@@ -15,6 +15,7 @@ int main(int argc, const char* argv[]) {
     return lf_reactor_c_main(argc, argv);
 }
 void lf_set_default_command_line_options() {}
+#include "_stepper.h"
 #include "_test_main.h"
 typedef enum {
     test_main,
@@ -104,6 +105,8 @@ void _lf_initialize_trigger_objects() {
     SUPPRESS_UNUSED_WARNING(watchdog_number);
     _test_main_main_self_t* test_main_self[1];
     SUPPRESS_UNUSED_WARNING(test_main_self);
+    _stepper_self_t* test_stepper_self[1];
+    SUPPRESS_UNUSED_WARNING(test_stepper_self);
     // ***** Start initializing test of class test
     test_main_self[0] = new__test_main();
     test_main_self[0]->base.environment = &environments[test_main];
@@ -121,6 +124,20 @@ void _lf_initialize_trigger_objects() {
     #if !defined LF_SINGLE_THREADED
     test_main_self[0]->base.reactor_mutex = NULL;
     #endif
+    {
+        _test_main_main_self_t *self = test_main_self[0];
+        // ***** Start initializing test.stepper of class Stepper
+        test_stepper_self[0] = new__stepper();
+        test_stepper_self[0]->base.environment = &environments[test_main];
+        bank_index = 0; SUPPRESS_UNUSED_WARNING(bank_index);
+        // width of -2 indicates that it is not a multiport.
+        test_stepper_self[0]->_lf_speed_width = -2;
+    
+        #if !defined LF_SINGLE_THREADED
+        test_stepper_self[0]->base.reactor_mutex = NULL;
+        #endif
+        //***** End initializing test.stepper
+    }
     //***** End initializing test
     // **** Start deferred initialize for test
     {
@@ -144,6 +161,15 @@ void _lf_initialize_trigger_objects() {
         
         // ** End initialization for reaction 1 of test
     
+        // **** Start deferred initialize for test.stepper
+        {
+            test_stepper_self[0]->base.name = "stepper";
+            test_stepper_self[0]->base.parent = (self_base_t*)test_main_self[0];
+        
+        
+        
+        }
+        // **** End of deferred initialize for test.stepper
     }
     // **** End of deferred initialize for test
     // **** Start non-nested deferred initialize for test
@@ -151,10 +177,20 @@ void _lf_initialize_trigger_objects() {
     
     
     
+        // **** Start non-nested deferred initialize for test.stepper
+        {
+        
+        
+        
+        
+        }
+        // **** End of non-nested deferred initialize for test.stepper
     }
     // **** End of non-nested deferred initialize for test
     // Connect inputs and outputs for reactor test.
-
+    // Connect inputs and outputs for reactor test.stepper.
+    {
+    }
     
     // Set reaction priorities for ReactorInstance test
     {

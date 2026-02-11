@@ -1,0 +1,8 @@
+target C{
+    single-threaded: true
+}
+
+main reactor{
+    
+
+}
