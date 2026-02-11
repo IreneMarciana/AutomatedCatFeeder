@@ -1,8 +1,8 @@
 target C{
     single-threaded: true,
-    cmake-include: ["../c_lib/bcm2835/motor.cmake"],
-    /*files: ["../c_lib/bcm2835/DEV_Config.h", "../c_lib/bcm2835/HR8825.h", "../c_lib/bcm2835/HR8825.c", 
-            "../c_lib/bcm2835/DEV_Config.c", "../c_lib/bcm2835/Debug.h"]*/
+    //cmake-include: ["../c_lib/bcm2835/motor.cmake"],
+    files: ["../c_lib/bcm2835/DEV_Config.h", "../c_lib/bcm2835/HR8825.h", "../c_lib/bcm2835/HR8825.c", 
+            "../c_lib/bcm2835/DEV_Config.c", "../c_lib/bcm2835/Debug.h"]
 }
 
 preamble {=
