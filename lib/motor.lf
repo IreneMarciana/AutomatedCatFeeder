@@ -19,7 +19,7 @@ main reactor{
             exit(0);
         
         // Exception handling:ctrl + c
-        signal(SIGINT, Handler);
+        //signal(SIGINT, Handler);
 
         HR8825_SelectMotor(MOTOR1);
         HR8825_SetMicroStep(HARDWARD, "fullstep");
