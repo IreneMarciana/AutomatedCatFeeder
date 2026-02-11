@@ -6,10 +6,12 @@ target C{
 }
 
 preamble {=
-  #include "HR8825.h"
-  #include "DEV_Config.h"
-  #include "Debug.h"
-  #include <stdio.h>
+    #include "HR8825.h"
+    #include "DEV_Config.h"
+    #include "Debug.h"
+    #include <stdio.h>      //printf()
+    #include <stdlib.h>     //exit()
+    #include <signal.h>
 =}
 
 main reactor{
@@ -19,7 +21,7 @@ main reactor{
             exit(0);
         
         // Exception handling:ctrl + c
-        //signal(SIGINT, Handler);
+        signal(SIGINT, Handler);
 
         HR8825_SelectMotor(MOTOR1);
         HR8825_SetMicroStep(HARDWARD, "fullstep");
