@@ -1,0 +1,11 @@
+target C{
+    single-threaded: true
+}
+
+//using boolean from loadcell, spin motor or leave be
+
+//email notif of feeding?
+main reactor{
+    
+
+}
