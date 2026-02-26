@@ -3,13 +3,18 @@ target C{
 }
 //sudo ./hx711_test 5 6 1 0
 reactor LoadCell{
-    output weight: double;
+    output weight: double; //grams
     timer t (1 sec, 2 sec);
+    input zero_scale: bool;
+
+    reaction()
 
 
     reaction(t)->weight {=
         weight = 0.0; //TODO: read from load cell
     =}
+
+
 
 
 }
