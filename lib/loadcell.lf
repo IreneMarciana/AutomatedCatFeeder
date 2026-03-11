@@ -65,7 +65,8 @@ reactor LoadCell(
 
     reaction(t)->weight {=
         long raw_data;
-        raw_data = getRawDataMean(&self->hx, self->samples);
+        //raw_data = getRawDataMean(&self->hx, self->samples);
+        raw_data = getRawData(&self->hx);
         //self->weight->value = raw_data; 
         lf_set(weight, (double)raw_data);
         // todo- add calibration to convert raw data to grams
