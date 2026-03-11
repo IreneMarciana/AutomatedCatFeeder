@@ -47,7 +47,9 @@ reactor LoadCell(
         }
 
         setupGPIO(&self->hx);
+        printf("\n!!! GPIO setup is done !!!\n");
         reset(&self->hx);
+        printf("\n!!! resetis done !!!\n");
 
         err = zeroScale(&self->hx);
         if (err)
