@@ -11,6 +11,8 @@ preamble {=
     #include "gb_common.h"
     #include <stdio.h> //printf()
     #include <stdlib.h> //exit()
+
+    static int gpio_initialized = 0;
 =}
 
 reactor LoadCell(
@@ -27,11 +29,18 @@ reactor LoadCell(
     output weight: double; //grams
     timer t (1 sec, 1 sec);
     
+    
+
     reaction(startup)->weight {=
         /*if not 
         main reactor {
             sensor = new HX711(clock_pin = 5, data_pin = 6)
         }*/
+
+        if (!gpio_initialized) {
+            setup_io();
+            gpio_initialized = 1;
+        }
 
         unsigned char clk = (unsigned char)self->clock_pin;
         unsigned char dat = (unsigned char)self->data_pin;
@@ -64,13 +73,18 @@ reactor LoadCell(
     =}
 
     reaction(t)->weight {=
-        long raw_data;
+        /*long raw_data;
         //raw_data = getRawDataMean(&self->hx, self->samples);
         raw_data = getRawData(&self->hx);
         //self->weight->value = raw_data; 
         lf_set(weight, (double)raw_data);
         // todo- add calibration to convert raw data to grams
-        printf("\n Current weight is: %ld", raw_data);// or weight->value?
+        printf("\n Current weight is: %ld", raw_data);// or weight->value?*/
+        int raw = getRawData(&self->hx);
+
+        printf("RAW HX711: %d\n", raw);
+
+        lf_set(weight, (double)raw);
     =}
 
     reaction(shutdown)  {=
