@@ -68,6 +68,7 @@ reactor LoadCell(
         reset(&self->hx);
         printf("\n!!! resetis done !!!\n");
 
+        getRawData(&self->hx);
         err = zeroScale(&self->hx);
         if (err)
         {
