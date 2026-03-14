@@ -25,7 +25,7 @@ reactor StepperMotor{
 
     initial mode idle {
         // case 1: weight under threshold, run is true + dispense
-        reaction(run){=
+        reaction(run)->reset(dispense){=
             if(run->value){
                 printf("Dispense mode has been entered!!\n"); 
                 lf_set_mode(dispense);
@@ -34,7 +34,7 @@ reactor StepperMotor{
         // case 2: weight in threshold, remain idle
             // no rxn needed!
         // case 3: weight under threshold, run is false + error
-        reaction(stop){=
+        reaction(stop)->reset(error){=
             if (stop->value){
                 printf("ERROR: stop signal received.\n"); 
                 lf_set_mode(error);
@@ -69,7 +69,7 @@ reactor StepperMotor{
             DEV_ModuleExit();
             //stop = false; 
         =}
-        reaction (cool_down) {=
+        reaction (cool_down)-> reset(idle) {=
             printf("Cool down period is over; returning to idle mode.\n"); 
             lf_set_mode(idle);
         =}
