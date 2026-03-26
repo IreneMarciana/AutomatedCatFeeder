@@ -35,42 +35,32 @@ reactor LoadCell(
     
 
     reaction(startup)->weight {=
-        if (!gpio_initialized) {
-            setup_io();
-            gpio_initialized = 1;
-        }
-
         int priority = 10;
-        unsigned char clk = (unsigned char)self->clock_pin;
-        unsigned char dat = (unsigned char)self->data_pin;
-        unsigned int samp = (unsigned int)self->samples;
-
-        printf("\n!!! Starting loadcell logic !!!\n");
-
-        int err = setPriority(priority);
-        if (err) {
-            printf("Failed to set priority\n");
+        err = setPriority(priority);
+        if (err)
+        {
+            printf("\n!!! Failed to set process priority to %d\n", priority);
+            exit();
         }
-
-        err = initHX711(&self->hx, clk, dat);
+        err = initHX711(&self->hx, clock_pin, data_pin);
         if (err)
         {
             printf("\n!!! Failed to init HX711 struct !!!\n");
+            exit();
         }
-
         setupGPIO(&self->hx);
         printf("\n!!! gpio setup is done !!!\n");
         reset(&self->hx);
-        printf("\n!!! resetis done !!!\n");
+        printf("\n!!! reset is done !!!\n");
 
         getRawData(&self->hx);
         err = zeroScale(&self->hx);
         if (err)
         {
             printf("\n!!! Failed to zero the scale.\n");
-            return;
+            exit();
         }
-        printf("\n Zero scale is done!");
+        printf("\n!!! zero setup is done !!!\n");
         //self->weight->value = 0.0; 
         lf_set(weight, 0.0);
 
