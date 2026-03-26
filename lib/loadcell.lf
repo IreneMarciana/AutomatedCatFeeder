@@ -70,9 +70,9 @@ reactor LoadCell(
         // todo
         //1) add calibration to convert raw data to grams
         //2) add threshold for low food
+        int raw_data = getRawDataMean(&self->hx, self->samples);
         printf("\n Current weight is: %ld", raw_data);// or weight->value?
         low_food = true;//placeholder
-        int raw_data = getRawDataMean(&self->hx, self->samples);
         //raw_data = getRawData(&self->hx);
         //printf("data pin state: %d\n", getPinState(self->hx.data_pin));
         lf_set(weight, (double)raw_data);
