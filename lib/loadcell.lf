@@ -36,17 +36,17 @@ reactor LoadCell(
 
     reaction(startup)->weight {=
         int priority = 10;
-        err = setPriority(priority);
+        int err = setPriority(priority);
         if (err)
         {
             printf("\n!!! Failed to set process priority to %d\n", priority);
-            exit();
+            //exit();
         }
         err = initHX711(&self->hx, clock_pin, data_pin);
         if (err)
         {
             printf("\n!!! Failed to init HX711 struct !!!\n");
-            exit();
+            //exit();
         }
         setupGPIO(&self->hx);
         printf("\n!!! gpio setup is done !!!\n");
@@ -58,7 +58,7 @@ reactor LoadCell(
         if (err)
         {
             printf("\n!!! Failed to zero the scale.\n");
-            exit();
+            //exit();
         }
         printf("\n!!! zero setup is done !!!\n");
         //self->weight->value = 0.0; 
@@ -74,11 +74,11 @@ reactor LoadCell(
         low_food = true;//placeholder
         int raw_data = getRawDataMean(&self->hx, self->samples);
         //raw_data = getRawData(&self->hx);
-        printf("data pin state: %d\n", getPinState(self->hx.data_pin));
+        //printf("data pin state: %d\n", getPinState(self->hx.data_pin));
         lf_set(weight, (double)raw_data);
-        printf("gpio5: %d  gpio6: %d\n",
-            getPinState(5),
-            getPinState(6));
+        //printf("gpio5: %d  gpio6: %d\n",
+          //  getPinState(5),
+            //getPinState(6));
     =}
 
     reaction(shutdown)  {=
