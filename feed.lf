@@ -19,10 +19,10 @@ main reactor{
         //lf_set(motor.run, true);
     =}
     
-    /*reaction(balance.low_food) {=
+    reaction(balance.low_food) {=
         printf("Low food detected! Current weight= %f\n", balance.weight->value);
         // spin motor
-    =}*/
+    =}
 
 
 }
