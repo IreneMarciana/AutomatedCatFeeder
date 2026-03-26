@@ -15,7 +15,7 @@ main reactor{
     reaction(startup)-> motor.run {=
 
         printf("Starting main reactor!\n");
-        printf("%d\n", balance.weight);
+        printf("%d\n", balance.weight->value);
         //lf_set(motor.run, true);
     =}
     
