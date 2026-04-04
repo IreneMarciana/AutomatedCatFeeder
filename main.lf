@@ -1,4 +1,4 @@
-target Python{
+target Python {
     keepalive: true
 }
 
@@ -7,18 +7,21 @@ reactor scale{
     output weight
 
     reaction(startup)->weight {=
-	    from HX711 import SimpleHX711, Rate
-	    self.hx = SimpleHX711(5, 6, 1, 0, Rate.HZ_80)
+        from HX711 import SimpleHX711, Rate
+        self.hx = SimpleHX711(5, 6, 1, 0, Rate.HZ_80)
+        print("HX711 initialized")
     =}
 
     reaction(t)->weight {=
-	    print(hx.weight())
+        print(self.hx.weight())
+        weight.set(self.hx.weight())  # Set output value
     =}
 }
 
 main reactor{
     s = new scale()
-    print("starting sclae reactor\n")
-    print(s.weight)
+    # If you want to print something when main starts, wrap in a reaction:
+    reaction(startup) {=
+        print("Starting scale reactor")
+    =}
 }
-
