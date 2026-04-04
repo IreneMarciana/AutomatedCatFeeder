@@ -7,7 +7,7 @@ target C{
 //sudo ./hx711_test 5 6 1 0
 // data = 5
 // clock = 6
-//test
+//test 2
 
 preamble {=
     #include "hx711.h"
