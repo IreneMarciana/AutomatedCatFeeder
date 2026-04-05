@@ -16,13 +16,13 @@ main reactor{
 
         printf("Starting main reactor!\n");
         //printf("%d\n", balance.weight->value);
-        //lf_set(motor.run, true);
+        lf_set(motor.run, true);
     =}
     
-    reaction(balance.weight) {=
+    /*reaction(balance.weight) {=
         printf("Weight= %f\n", balance.weight->value);
         // spin motor
-    =}
+    =}*/
 
 
 }
