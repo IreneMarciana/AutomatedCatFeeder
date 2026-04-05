@@ -36,34 +36,51 @@ reactor LoadCell{
     
 
     reaction(startup)->weight {=
-        int err = setPriority(10);
+        int err;
 
+        printf("\n=== STARTUP: Initializing GPIO backend ===\n");
+
+        // map GPIO memory
+        setup_io();
+        printf("GPIO memory mapped at %p\n", (void*)gpio);
+
+        // set process priority
+        err = setPriority(10);
+        if (err) {
+            printf("Warning: Failed to set priority\n");
+        }
+
+        // init hx711
         initHX711(&self->hx, 6, 5);
+        printf("HX711 initialized with clock=%d, data=%d\n", self->hx.clock_pin, self->hx.data_pin);
+
+        // setup gpio pins
         setupGPIO(&self->hx);
-        printf("\n!!! gpio setup is done !!!\n");
+        printf("GPIO pins configured\n");
 
+        // reset hx711
         reset(&self->hx);
-        printf("\n!!! reset is done !!!\n");
-
-        // stabilize hzx711
-        usleep(500000);
+        printf("HX711 reset done\n");
 
         // fuzzy calibration
+        usleep(500000);
         for (int i = 0; i < 5; i++) {
-            getRawData(&self->hx);
+            int val = getRawData(&self->hx);
+            printf("Startup fuzzy read %d: %d\n", i, val);
             usleep(100000);
         }
 
         // zero scale
         err = zeroScale(&self->hx);
         if (err) {
-            printf("\n!!! Failed to zero the scale.\n");
+            printf("!!! Failed to zero the scale.\n");
+        } else {
+            printf("Scale zeroed successfully\n");
         }
 
-        printf("\n!!! zero setup is done !!!\n");
-
+        printf("=== STARTUP COMPLETE ===\n");
         lf_set(weight, 0.0);
-=}
+    =}
 
     reaction(t)->weight, low_food {=
         printf("\n=== NEW READ CYCLE ===\n");
