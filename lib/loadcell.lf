@@ -18,6 +18,22 @@ preamble {=
     #include "gb_common.h"
     #include <stdio.h> //printf()
     #include <stdlib.h> //exit()
+
+    void sort(int *arr, int n) {
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+
+            arr[j + 1] = key;
+        }
+    }
+
+
 =}
 
 reactor LoadCell{
@@ -91,7 +107,8 @@ reactor LoadCell{
         //printf("RAW SINGLE READ: %d\n", raw_single);
 
         // main read w/ 10 samples
-        int raw_mean = getRawDataMean(&self->hx, 10);
+        int raw_mean = getRawDataMean(&self->hx, 100);
+
         //printf("RAW MEAN READ: %d\n", raw_mean);
 
         lf_set(weight, (double)raw_mean);
