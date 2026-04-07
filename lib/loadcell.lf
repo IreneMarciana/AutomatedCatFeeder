@@ -40,10 +40,6 @@ reactor LoadCell{
 
         printf("\n=== STARTUP: Initializing GPIO backend ===\n");
 
-        // map GPIO memory
-        setup_io();
-        printf("GPIO memory mapped at %p\n", (void*)gpio);
-
         // set process priority
         err = setPriority(10);
         if (err) {
