@@ -9,6 +9,10 @@ target C{
 // clock = 6
 //test 3
 
+//todo:
+// pass in read as double not int
+// calibration
+
 preamble {=
     #include "hx711.h"
     #include "gb_common.h"
@@ -33,12 +37,10 @@ reactor LoadCell{
     
 
     reaction(startup)->weight {=
-        int err;
-
         printf("\nentering loadcell startup\n");
 
         // set process priority
-        err = setPriority(10);
+        int err = setPriority(10);
         if (err) {
             printf("FAILURE: priority\n");
         }
@@ -50,18 +52,6 @@ reactor LoadCell{
         // setup gpio pins
         setupGPIO(&self->hx);
         
-        printf("\n\test removedn");
-/*
-        //BEGIN TEST
-        setPinState(self->hx.clock_pin, 1);
-        usleep(1000);
-        int high = getPinState(self->hx.clock_pin);
-        setPinState(self->hx.clock_pin, 0);
-        usleep(1000);
-        int low = getPinState(self->hx.clock_pin);
-        printf("CLOCK TEST -> HIGH: %d, LOW: %d\n", high, low);
-        //END TEST
-*/
         // reset hx711
         reset(&self->hx);
         printf("hx711 reset done\n");
@@ -89,9 +79,6 @@ reactor LoadCell{
 
     reaction(t)->weight, low_food {=
 
-        /*int state_before = getPinState(self->hx.data_pin);
-        printf("DATA PIN BEFORE WAIT: %d\n", state_before);*/
-
         // wait for pin to go low
         int wait_count = 0;
         while (getPinState(self->hx.data_pin) == 1) {
@@ -102,9 +89,6 @@ reactor LoadCell{
             }
         }
 
-        /*int clk_state = getPinState(self->hx.clock_pin);
-        printf("CLOCK PIN STATE BEFORE READ: %d\n", clk_state);*/
-
         // single read
         int raw_single = getRawData(&self->hx);
         printf("RAW SINGLE READ: %d\n", raw_single);
@@ -112,18 +96,6 @@ reactor LoadCell{
         // main read w/ 5 samples
         int raw_mean = getRawDataMean(&self->hx, 5);
         printf("RAW MEAN READ: %d\n", raw_mean);
-
-        /*// 6. Try toggling clock manually (TEST)
-        printf("Manual clock toggle test...\n");
-        for (int i = 0; i < 5; i++) {
-            setPinState(self->hx.clock_pin, 1);
-            usleep(10);
-            setPinState(self->hx.clock_pin, 0);
-            usleep(10);
-        }
-
-        int clk_after = getPinState(self->hx.clock_pin);
-        printf("CLOCK PIN AFTER TOGGLE: %d\n", clk_after);*/
 
         lf_set(weight, (double)raw_mean);
         lf_set(low_food, raw_mean < 10000);
