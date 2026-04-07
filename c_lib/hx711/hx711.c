@@ -3,9 +3,8 @@
 #include <string.h>
 #include <stdio.h>
 
-// =========================
-// MEMORY BARRIER (CRITICAL)
-// =========================
+// changed!
+// added memory barrier
 #define MEM_BARRIER() __sync_synchronize()
 
 int setupGPIO(HX711 *hx)
@@ -16,7 +15,8 @@ int setupGPIO(HX711 *hx)
   INP_GPIO(hx->clock_pin);
   OUT_GPIO(hx->clock_pin);
 
-  // Ensure clock starts LOW
+  // changed! 
+  //ensure clock begins low instead of error msg
   setPinState(hx->clock_pin, 0);
   usleep(10);
 
@@ -25,6 +25,7 @@ int setupGPIO(HX711 *hx)
 
 void cleanGPIO(HX711 *hx)
 {
+  //unpull pins
   GPIO_PULL = 0;
   GPIO_PULLCLK0 = 1 << hx->data_pin;
   GPIO_PULL = 0;
@@ -32,9 +33,7 @@ void cleanGPIO(HX711 *hx)
   restore_io();
 }
 
-// =========================
-// PRIORITY
-// =========================
+//set higher priority for the process
 int setPriority(int priority)
 {
   struct sched_param sched;
@@ -48,9 +47,7 @@ int setPriority(int priority)
   return 0;
 }
 
-// =========================
-// RESET HX711
-// =========================
+
 void reset(HX711 *hx)
 {
   setPinState(hx->clock_pin, 1);
@@ -59,11 +56,10 @@ void reset(HX711 *hx)
   usleep(100);
 }
 
-// =========================
-// GAIN SETTING
-// =========================
+
 void setGain(HX711 *hx)
 {
+  // changed!
   int pulses = 1;
 
   if (hx->wanted_channel == 'B')
@@ -80,20 +76,18 @@ void setGain(HX711 *hx)
   }
 }
 
-// =========================
-// RAW DATA READ (FIXED)
-// =========================
+// changed!
 int getRawData(HX711 *hx)
 {
   unsigned int bits = 0;
 
-  // Wait until DATA goes LOW (ready)
+  // wait until low data
   while (getPinState(hx->data_pin))
   {
     usleep(100);
   }
 
-  // Read 24 bits
+  // read 24 bits of data
   for (int i = 0; i < 24; i++)
   {
     setPinState(hx->clock_pin, 1);
@@ -105,10 +99,11 @@ int getRawData(HX711 *hx)
     usleep(1);
   }
 
-  // Set gain for next read
+  // set gain for next read
   setGain(hx);
 
-  // Sign extend 24-bit value
+  //  bits = ~0x1800000 & bits;
+  //  bits = ~0x800000 & bits;
   if (bits & 0x800000)
   {
     bits |= ~0xFFFFFF;
@@ -117,9 +112,9 @@ int getRawData(HX711 *hx)
   return (int)bits;
 }
 
-// =========================
-// GPIO READ (FIXED)
-// =========================
+
+// changed!
+// memory barrier!!
 bool getPinState(unsigned pin_number)
 {
   if (pin_number > 31)
@@ -137,9 +132,8 @@ bool getPinState(unsigned pin_number)
   return value != 0;
 }
 
-// =========================
-// GPIO WRITE (FIXED)
-// =========================
+// changed!
+// memory barrier!!
 int setPinState(unsigned pin_number, bool state)
 {
   if (pin_number > 31)
@@ -160,9 +154,7 @@ int setPinState(unsigned pin_number, bool state)
   return 0;
 }
 
-// =========================
-// INIT
-// =========================
+
 int initHX711(HX711 *hx, unsigned char clock_pin, unsigned char data_pin)
 {
   if (clock_pin > 31 || data_pin > 31)
@@ -190,9 +182,7 @@ int initHX711(HX711 *hx, unsigned char clock_pin, unsigned char data_pin)
   return 0;
 }
 
-// =========================
-// ZERO SCALE
-// =========================
+//changed!
 int zeroScale(HX711 *hx)
 {
   double result = getRawDataMean(hx, 50);
@@ -206,9 +196,7 @@ int zeroScale(HX711 *hx)
   return 1;
 }
 
-// =========================
-// MEAN RAW DATA
-// =========================
+// changed!
 int getRawDataMean(HX711 *hx, int samples)
 {
   long sum = 0;
@@ -223,18 +211,14 @@ int getRawDataMean(HX711 *hx, int samples)
   return (int)(sum / samples);
 }
 
-// =========================
-// DATA (OFFSET APPLIED)
-// =========================
+// changed!
 int getDataMean(HX711 *hx, int samples)
 {
   int result = getRawDataMean(hx, samples);
   return result - hx->offset_A_128;
 }
 
-// =========================
-// WEIGHT
-// =========================
+// changed!
 int getWeightMean(HX711 *hx, int samples)
 {
   int result = getRawDataMean(hx, samples);
