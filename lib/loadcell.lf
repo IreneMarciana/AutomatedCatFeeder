@@ -12,6 +12,9 @@ target C{
 //todo:
 // pass in read as double not int
 // calibration 
+// convert sort to median function
+
+// EMPTY BOWL = 44 GRAMS
 
 preamble {=
     #include "hx711.h"
@@ -40,6 +43,11 @@ reactor LoadCell{
     input samples: int;*/
 
     state hx: HX711; 
+    // calibration states
+    state calibrated: bool;//init?
+    state offset: double;// init?
+    state calib_phase: int=0;
+    state scale: double;
 
     output weight: double; //grams
     output low_food: bool;
@@ -70,16 +78,12 @@ reactor LoadCell{
         // fuzzy calibration
         usleep(500000);
         printf("Calibrating load cell sensor for 5 seconds...");
-        int calib=0;
         for (int i = 0; i < 5; i++) {
             int val = getRawData(&self->hx);
-            calib+=val;
             //printf("Fuzzy calib %d: %d\n", i, val);
             usleep(100000);
         }
         //or use median func
-        calib = calib/5;
-        lf_set(calibration, calib);
         // zero scale
         err = zeroScale(&self->hx);
         if (err) {
@@ -92,6 +96,7 @@ reactor LoadCell{
 
     reaction(t)->weight, low_food {=
 
+        // 1) raw value read
         // wait for pin to go low
         int wait_count = 0;
         while (getPinState(self->hx.data_pin) == 1) {
@@ -108,7 +113,6 @@ reactor LoadCell{
             raw_vals[i] = getRawData(&self->hx);
             usleep(5000);
         }
-
         // single read
         //int raw_single = getRawData(&self->hx);
         //printf("RAW SINGLE READ: %d\n", raw_single);
@@ -119,10 +123,46 @@ reactor LoadCell{
 
         // sort samples
         sort(raw_vals, 10);
-
         // median value
         int raw_median = raw_vals[5];
         printf("\nRAW MEDIAN: %d\n\n", raw_median);
+
+
+        // 2) calibration
+        // TO BE CHANGED-> bowl will always be on balance
+        // 0 is empty scale
+        if (self->calib_phase == 0) {
+            printf("Calibrating empty scale\n");
+            self->offset = raw;
+            self->calib_phase = 1;
+            return;
+        }
+        // 1 is scale w/ bowl
+        if (self->calib_phase == 1) {
+            printf("Place bowl (44g) on scale...\n");
+
+            // recalibrate bowl
+            if (raw > self->offset + 10000) {
+                double delta = raw - self->offset;
+                self->scale = 44.0 / delta;
+                self->calib_phase = 2;
+                self->calibrated = true;
+
+                printf("CALIBRATED!\n");
+                printf("offset = %f\n", self->offset);
+                printf("scale  = %f g/unit\n", self->scale);
+            }
+            return;
+        }
+
+        if (self->calibrated) {
+            double grams = (raw - self->offset) * self->scale;
+
+            printf("Weight (g): %.2f\n", grams);
+
+            lf_set(weight, grams);
+            lf_set(low_food, grams < 10.0);  // threshold in grams now!
+        }
 
         lf_set(weight, (double)raw_median);
         lf_set(low_food, raw_median < 10000);
