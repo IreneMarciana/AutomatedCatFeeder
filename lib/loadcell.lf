@@ -31,7 +31,7 @@ reactor LoadCell{
     output low_food: bool;
     output calibration: float;
 
-    timer t (1 sec, 1 sec);
+    timer t (1 sec, 2 sec);
     
     reaction(startup)->weight, calibration {=
         //printf("\nentering loadcell startup\n");
