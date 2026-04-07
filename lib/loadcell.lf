@@ -1,5 +1,6 @@
 target C{
     single-threaded: true,
+    keepalive:true,
     cmake-include: ["../c_lib/hx711/scale.cmake"],
     files: ["../c_lib/hx711/gb_common.c", "../c_lib/hx711/gb_common.h", "../c_lib/hx711/hx711.c", 
             "../c_lib/hx711/hx711.h"]
@@ -7,7 +8,6 @@ target C{
 //sudo ./hx711_test 5 6 1 0
 // data = 5
 // clock = 6
-//test 3
 
 //todo:
 // pass in read as double not int
@@ -18,12 +18,9 @@ preamble {=
     #include "gb_common.h"
     #include <stdio.h> //printf()
     #include <stdlib.h> //exit()
-
-    static int gpio_initialized = 0;
 =}
 
 reactor LoadCell{
-
     /*input clock_pin: int;
     input data_pin: int;
     input samples: int;*/
@@ -32,12 +29,12 @@ reactor LoadCell{
 
     output weight: double; //grams
     output low_food: bool;
+    output calibration: float;
+
     timer t (1 sec, 1 sec);
     
-    
-
-    reaction(startup)->weight {=
-        printf("\nentering loadcell startup\n");
+    reaction(startup)->weight, calibration {=
+        //printf("\nentering loadcell startup\n");
 
         // set process priority
         int err = setPriority(10);
@@ -54,25 +51,25 @@ reactor LoadCell{
         
         // reset hx711
         reset(&self->hx);
-        printf("hx711 reset done\n");
+        //printf("hx711 reset done\n");
 
         // fuzzy calibration
         usleep(500000);
-        int calib=0;
+        float calib=0.0;
         for (int i = 0; i < 5; i++) {
             int val = getRawData(&self->hx);
             calib+=val;
-            printf("Fuzzy calib %d: %d\n", i, val);
+            //printf("Fuzzy calib %d: %d\n", i, val);
             usleep(100000);
         }
         calib = calib/5;
-
+        lf_set(calibration, calib);
         // zero scale
         err = zeroScale(&self->hx);
         if (err) {
             printf("FAILURE: zero scale\n");
         } 
-        printf("exiting startup\n~~~~~~~~~~~~~~~~\n");
+        //printf("exiting startup\n~~~~~~~~~~~~~~~~\n");
         //set init weight to measured
         lf_set(weight, 0.0);
     =}
@@ -91,11 +88,11 @@ reactor LoadCell{
 
         // single read
         int raw_single = getRawData(&self->hx);
-        printf("RAW SINGLE READ: %d\n", raw_single);
+        //printf("RAW SINGLE READ: %d\n", raw_single);
 
         // main read w/ 5 samples
         int raw_mean = getRawDataMean(&self->hx, 5);
-        printf("RAW MEAN READ: %d\n", raw_mean);
+        //printf("RAW MEAN READ: %d\n", raw_mean);
 
         lf_set(weight, (double)raw_mean);
         lf_set(low_food, raw_mean < 10000);
