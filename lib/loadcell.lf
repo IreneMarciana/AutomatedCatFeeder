@@ -124,6 +124,7 @@ reactor LoadCell{
 
         lf_set(weight, (double)raw_median);
         lf_set(low_food, raw_median < 10000);
+        printf("-----------------------------");
     =}
 
     reaction(shutdown)  {=
