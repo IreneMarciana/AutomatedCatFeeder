@@ -35,23 +35,23 @@ reactor LoadCell{
     reaction(startup)->weight {=
         int err;
 
-        printf("\n=== STARTUP: Initializing GPIO backend ===\n");
+        printf("\nentering loadcell startup\n");
 
         // set process priority
         err = setPriority(10);
         if (err) {
-            printf("Warning: Failed to set priority\n");
+            printf("FAILURE: priority\n");
         }
 
-        // init hx711
+        // init hx711 w/ clock=6 and data=5
+        // maybe later generalize as input parameter?(self->hx.clock_pin)
         initHX711(&self->hx, 6, 5);
-        printf("HX711 initialized with clock=%d, data=%d\n", self->hx.clock_pin, self->hx.data_pin);
 
         // setup gpio pins
         setupGPIO(&self->hx);
-        printf("GPIO pins configured\n");
-        printf("Testing clock pin write...\n");
-
+        
+        printf("\n\test removedn");
+/*
         //BEGIN TEST
         setPinState(self->hx.clock_pin, 1);
         usleep(1000);
@@ -61,63 +61,59 @@ reactor LoadCell{
         int low = getPinState(self->hx.clock_pin);
         printf("CLOCK TEST -> HIGH: %d, LOW: %d\n", high, low);
         //END TEST
-
+*/
         // reset hx711
         reset(&self->hx);
-        printf("HX711 reset done\n");
+        printf("hx711 reset done\n");
 
         // fuzzy calibration
         usleep(500000);
+        int calib=0;
         for (int i = 0; i < 5; i++) {
             int val = getRawData(&self->hx);
-            printf("Startup fuzzy read %d: %d\n", i, val);
+            calib+=val;
+            printf("Fuzzy calib %d: %d\n", i, val);
             usleep(100000);
         }
+        calib = calib/5;
 
         // zero scale
         err = zeroScale(&self->hx);
         if (err) {
-            printf("!!! Failed to zero the scale.\n");
-        } else {
-            printf("Scale zeroed successfully\n");
-        }
-
-        printf("=== STARTUP COMPLETE ===\n");
+            printf("FAILURE: zero scale\n");
+        } 
+        printf("exiting startup\n~~~~~~~~~~~~~~~~\n");
+        //set init weight to measured
         lf_set(weight, 0.0);
     =}
 
     reaction(t)->weight, low_food {=
-        printf("\n=== NEW READ CYCLE ===\n");
 
-        // 1. Check pin states BEFORE waiting
-        int state_before = getPinState(self->hx.data_pin);
-        printf("DATA PIN BEFORE WAIT: %d\n", state_before);
+        /*int state_before = getPinState(self->hx.data_pin);
+        printf("DATA PIN BEFORE WAIT: %d\n", state_before);*/
 
-        // 2. Wait for ready
+        // wait for pin to go low
         int wait_count = 0;
         while (getPinState(self->hx.data_pin) == 1) {
             usleep(1000);
             wait_count++;
             if (wait_count % 1000 == 0) {
-                printf("...still waiting (%d ms)\n", wait_count);
+                printf("waiting for low data pin (%d ms)\n", wait_count);
             }
         }
 
-        printf("DATA PIN READY (LOW)\n");
+        /*int clk_state = getPinState(self->hx.clock_pin);
+        printf("CLOCK PIN STATE BEFORE READ: %d\n", clk_state);*/
 
-        // 3. Check clock pin state
-        int clk_state = getPinState(self->hx.clock_pin);
-        printf("CLOCK PIN STATE BEFORE READ: %d\n", clk_state);
-
-        // 4. Manual single raw read (bypass mean)
+        // single read
         int raw_single = getRawData(&self->hx);
         printf("RAW SINGLE READ: %d\n", raw_single);
 
-        // 5. Mean read
+        // main read w/ 5 samples
         int raw_mean = getRawDataMean(&self->hx, 5);
         printf("RAW MEAN READ: %d\n", raw_mean);
 
-        // 6. Try toggling clock manually (TEST)
+        /*// 6. Try toggling clock manually (TEST)
         printf("Manual clock toggle test...\n");
         for (int i = 0; i < 5; i++) {
             setPinState(self->hx.clock_pin, 1);
@@ -127,7 +123,7 @@ reactor LoadCell{
         }
 
         int clk_after = getPinState(self->hx.clock_pin);
-        printf("CLOCK PIN AFTER TOGGLE: %d\n", clk_after);
+        printf("CLOCK PIN AFTER TOGGLE: %d\n", clk_after);*/
 
         lf_set(weight, (double)raw_mean);
         lf_set(low_food, raw_mean < 10000);
