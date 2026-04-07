@@ -19,19 +19,19 @@ preamble {=
     #include <stdio.h> //printf()
     #include <stdlib.h> //exit()
 
+    // change into median function
     static void sort(int *arr, int n) {
-            for (int i = 1; i < n; i++) {
-                int key = arr[i];
-                int j = i - 1;
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
 
-                while (j >= 0 && arr[j] > key) {
-                    arr[j + 1] = arr[j];
-                    j--;
-                }
-
-                arr[j + 1] = key;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
             }
+            arr[j + 1] = key;
         }
+    }
 =}
 
 reactor LoadCell{
@@ -43,7 +43,7 @@ reactor LoadCell{
 
     output weight: double; //grams
     output low_food: bool;
-    output calibration: float;
+    output calibration: int;
 
     timer t (1 sec, 2 sec);
     
@@ -69,13 +69,15 @@ reactor LoadCell{
 
         // fuzzy calibration
         usleep(500000);
-        float calib=0.0;
+        printf("Calibrating load cell sensor for 5 seconds...");
+        int calib=0;
         for (int i = 0; i < 5; i++) {
             int val = getRawData(&self->hx);
             calib+=val;
             //printf("Fuzzy calib %d: %d\n", i, val);
             usleep(100000);
         }
+        //or use median func
         calib = calib/5;
         lf_set(calibration, calib);
         // zero scale
@@ -85,7 +87,7 @@ reactor LoadCell{
         } 
         //printf("exiting startup\n~~~~~~~~~~~~~~~~\n");
         //set init weight to measured
-        lf_set(weight, 0.0);
+        //lf_set(weight, 0.0);
     =}
 
     reaction(t)->weight, low_food {=
@@ -112,8 +114,8 @@ reactor LoadCell{
         //printf("RAW SINGLE READ: %d\n", raw_single);
 
         // main read w/ 10 samples
-        int raw_mean = getRawDataMean(&self->hx, 10);
-        printf("\nRAW MEAN: %d\n", raw_mean);
+        //int raw_mean = getRawDataMean(&self->hx, 10);
+        //printf("\nRAW MEAN: %d\n", raw_mean);
 
         // sort samples
         sort(raw_vals, 10);
@@ -124,7 +126,6 @@ reactor LoadCell{
 
         lf_set(weight, (double)raw_median);
         lf_set(low_food, raw_median < 10000);
-        printf("-----------------------------");
     =}
 
     reaction(shutdown)  {=
