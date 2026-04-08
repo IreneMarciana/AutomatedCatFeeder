@@ -133,7 +133,7 @@ reactor LoadCell{
         // 0 is empty scale
         if (self->calib_phase == 0) {
             printf("Calibrating empty scale\n");
-            self->offset = raw;
+            self->offset = (double)raw_median;
             self->calib_phase = 1;
             return;
         }
@@ -142,8 +142,8 @@ reactor LoadCell{
             printf("Place bowl (44g) on scale...\n");
 
             // recalibrate bowl
-            if (raw > self->offset + 10000) {
-                double delta = raw - self->offset;
+            if (raw_median > self->offset + 10000) {
+                double delta = raw_median - self->offset;
                 self->scale = 44.0 / delta;
                 self->calib_phase = 2;
                 self->calibrated = true;
@@ -156,7 +156,7 @@ reactor LoadCell{
         }
 
         if (self->calibrated) {
-            double grams = (raw - self->offset) * self->scale;
+            double grams = (raw_median - self->offset) * self->scale;
 
             printf("Weight (g): %.2f\n", grams);
 
@@ -164,8 +164,8 @@ reactor LoadCell{
             lf_set(low_food, grams < 10.0);  // threshold in grams now!
         }
 
-        lf_set(weight, (double)raw_median);
-        lf_set(low_food, raw_median < 10000);
+        //lf_set(weight, (double)raw_median);
+        //lf_set(low_food, raw_median < 10000);
     =}
 
     reaction(shutdown)  {=
