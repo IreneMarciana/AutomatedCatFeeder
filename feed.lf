@@ -8,6 +8,7 @@ import LoadCell from "lib/loadcell.lf";
 //email notif of feeding?
 main reactor{
     state run: bool = false
+    timer motor_test(1 sec, 10 sec);
     motor = new StepperMotor();
     loadcell = new LoadCell();
     //balance = new LoadCell(clock_pin = 6, data_pin = 5)

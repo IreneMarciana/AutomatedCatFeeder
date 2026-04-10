@@ -10,9 +10,10 @@ target C{
 // clock = 6
 
 //todo:
-// pass in read as double not int
-// calibration 
 // convert sort to median function
+// scale present boolean usage
+// empty bowl vs nonideal bowl weight vs ideal bowl
+// handle bowl being removed aka error state, perfect weight, low food in appropriate threshold
 
 // EMPTY BOWL = 44 GRAMS
 
@@ -41,23 +42,24 @@ reactor LoadCell{
     /*input clock_pin: int;
     input data_pin: int;
     input samples: int;*/
-
+    // init hx711
     state hx: HX711; 
+
+    state scale_init: bool;
+    state bowl_state: int;
+    state bowl_weight: double;
     // calibration states
     state calibrated: bool;//init?
     state offset: double;// init?
-    state calib_phase: int=0;
     state scale: double;
 
     output weight: double; //grams
     output low_food: bool;
-    output calibration: int;
+    output error_state: bool;
 
     timer t (1 sec, 2 sec);
     
-    reaction(startup)->weight, calibration {=
-        //printf("\nentering loadcell startup\n");
-
+    reaction(startup)->weight{=
         // set process priority
         int err = setPriority(10);
         if (err) {
@@ -75,6 +77,7 @@ reactor LoadCell{
         reset(&self->hx);
         //printf("hx711 reset done\n");
 
+//POTENTIALLY REMOVE
         // fuzzy calibration
         usleep(500000);
         printf("Calibrating load cell sensor for 5 seconds...");
@@ -83,6 +86,7 @@ reactor LoadCell{
             //printf("Fuzzy calib %d: %d\n", i, val);
             usleep(100000);
         }
+// END OF POTENTIAL REMOVAL
         //or use median func
         // zero scale
         err = zeroScale(&self->hx);
@@ -94,7 +98,7 @@ reactor LoadCell{
         //lf_set(weight, 0.0);
     =}
 
-    reaction(t)->weight, low_food {=
+    reaction(t)->weight, low_food, error_state {=
 
         // 1) raw value read
         // wait for pin to go low
@@ -129,48 +133,63 @@ reactor LoadCell{
 
 
         // 2) calibration
-        // TO BE CHANGED-> bowl will always be on balance
-        // 0 is empty scale
+        // tbd= user input scale weight?
+        // false is empty scale
             //launch error state
-        // 1 is scale w/ bowl(44g)
+        // true is scale w/ bowl(44g)
             // 0 empty bowl(44g)
             // 1 nonideal bowl weight w/ food(44+50= ~94g)
             // 2 ideal bowl weight w/ food(44 < x < 90 g )
-        if (self->calib_phase == 0) {
+        if (self->scale_init == false) {
             printf("Calibrating empty scale\n");
             self->offset = (double)raw_median;
-            self->calib_phase = 1;
+            self->scale_init = true;
             return;
         }
         // 1 is scale w/ bowl
-        if (self->calib_phase == 1) {
+        if (self->scale_init== true) {
             printf("Waiting for bowl (44g) on scale...\n");
-
             // recalibrate bowl
             if (raw_median > self->offset + 10000) {
                 double delta = raw_median - self->offset;
                 self->scale = 44.0 / delta;
-                self->calib_phase = 2;
                 self->calibrated = true;
 
                 printf("CALIBRATED!\n");
                 printf("offset = %f\n", self->offset);
                 printf("scale  = %f g/unit\n", self->scale);
+                
+                double grams = (raw_median - self->offset) * self->scale;
+                self->bowl_weight=grams;
+                
             }
             return;
         }
 
+
         if (self->calibrated) {
             double grams = (raw_median - self->offset) * self->scale;
-
             printf("Weight (g): %.2f\n", grams);
-
             lf_set(weight, grams);
-            lf_set(low_food, grams < 10.0);  // threshold in grams now!
+            // modify to save bowl weight!!!
+            // might need to floor grams
+            double food = self->bowl_weight - grams;
+            if (food>=50 || food<=60){
+                //perfect food
+                lf_set(error_state, false);
+                lf_set(low_food, false);
+            }
+            else if(food<50 && food >=0){
+                lf_set(error_state, false);
+                lf_set(low_food, true);
+            }
+            else if (food<50 && food <0){
+                lf_set(error_state, true);
+                lf_set(low_food, true);
+
+            }
         }
 
-        //lf_set(weight, (double)raw_median);
-        //lf_set(low_food, raw_median < 10000);
     =}
 
     reaction(shutdown)  {=
