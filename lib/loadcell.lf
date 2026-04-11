@@ -147,7 +147,7 @@ reactor LoadCell{
             return;
         }
         // 1 is scale w/ bowl
-        if (self->scale_init== true) {
+        if (self->scale_init== true && !self->calibrated) {
             printf("Waiting for bowl (44g) on scale...\n");
             // recalibrate bowl
             if (raw_median > self->offset + 10000) {
