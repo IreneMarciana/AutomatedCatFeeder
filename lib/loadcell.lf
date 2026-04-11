@@ -174,17 +174,20 @@ reactor LoadCell{
             // modify to save bowl weight!!!
             // might need to floor grams
             double food = self->bowl_weight - grams;
+            printf("%.2f\n", food);
             if (food>=50 || food<=60){
                 //perfect food
+                printf("LOADCELL CASE 1\n");
                 lf_set(error_state, false);
                 lf_set(low_food, false);
             }
             else if(food<50 && food >=0){
+                printf("LOADCELL CASE 2\n");
                 lf_set(error_state, false);
                 lf_set(low_food, true);
-                printf("DISPENSING FOOD IN LOADCELL");
             }
             else if (food<50 && food <0){
+                printf("LOADCELL CASE 3\n");
                 lf_set(error_state, true);
                 lf_set(low_food, true);
 

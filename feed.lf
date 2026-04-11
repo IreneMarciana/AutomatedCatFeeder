@@ -29,7 +29,7 @@ main reactor{
     =}*/
 
     reaction(loadcell.low_food)-> motor.run {=
-        printf("low food reactor entered");
+        printf("low food reactor entered\n");
         if (loadcell.low_food->value) {
             printf("Low food detected! Spinning motor...\n");
             //spin motor
