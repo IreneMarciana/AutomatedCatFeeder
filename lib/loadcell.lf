@@ -182,6 +182,7 @@ reactor LoadCell{
             else if(food<50 && food >=0){
                 lf_set(error_state, false);
                 lf_set(low_food, true);
+                printf("DISPENSING FOOD IN LOADCELL");
             }
             else if (food<50 && food <0){
                 lf_set(error_state, true);
