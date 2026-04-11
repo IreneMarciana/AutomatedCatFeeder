@@ -32,7 +32,9 @@ placeholder
 
 To be done:
 - overview
+- assumptions
 - hardware
 - software(mod bcm + hx711 changes)
 - demo
 - usage
+

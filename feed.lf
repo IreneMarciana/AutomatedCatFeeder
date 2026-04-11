@@ -1,5 +1,6 @@
 target C{
-    single-threaded: true
+    single-threaded: true,
+    keepalive: true
 }
 import StepperMotor from "lib/motor.lf";
 import LoadCell from "lib/loadcell.lf";

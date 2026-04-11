@@ -14,6 +14,7 @@ target C{
 // scale present boolean usage
 // empty bowl vs nonideal bowl weight vs ideal bowl
 // handle bowl being removed aka error state, perfect weight, low food in appropriate threshold
+// ISSUE: MOTOR ONLY SPINS 1ST TIME
 
 // EMPTY BOWL = 44 GRAMS
 
@@ -175,6 +176,7 @@ reactor LoadCell{
             // modify to save bowl weight!!!
             // might need to floor grams
             double food = self->bowl_weight - grams;
+            // test statements
             printf("%.2f\n", food);
             printf("%.2f\n", ceil(food));
             if(food<50 && food >=0){
