@@ -78,7 +78,7 @@ reactor LoadCell{
         // reset hx711
         reset(&self->hx);
         //printf("hx711 reset done\n");
-        
+
         //or use median func
         // zero scale
         err = zeroScale(&self->hx);
@@ -173,7 +173,7 @@ reactor LoadCell{
                 lf_set(error_state, false);
                 lf_set(low_food, false);
             }
-            else if (food<50 && food <0){
+            else if (food>60 && food <0){
                 printf("LOADCELL CASE 3\n");
                 lf_set(error_state, true);
                 lf_set(low_food, true);
