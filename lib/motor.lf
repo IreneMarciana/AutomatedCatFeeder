@@ -29,7 +29,7 @@ reactor StepperMotor{
 
     initial mode IDLE {
         // case 1: weight under threshold, run is true + dispense
-        reaction(run)->reset(DISPENSE){=//reaction(reset)??
+        reaction(run)->reset(DISPENSE){=
             if(run->value){
                 printf("Dispense mode has been entered!!\n"); 
                 lf_set_mode(DISPENSE);
