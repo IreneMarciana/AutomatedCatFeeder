@@ -66,7 +66,7 @@ reactor StepperMotor{
     }
 
     mode ERROR {
-        reaction(stop) {=
+        reaction(startup) {=
             printf("ERROR: weight index out of range; shutting down.\n"); 
             HR8825_SelectMotor(MOTOR2);
             HR8825_Stop();
