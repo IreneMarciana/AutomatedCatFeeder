@@ -34,7 +34,7 @@ preamble {=
             }
             arr[j + 1] = key;
         }
-        return *arr[5];
+        return arr[5];
     }
 =}
 
