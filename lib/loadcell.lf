@@ -9,12 +9,9 @@ target C{
 // data = 5
 // clock = 6
 
-//todo:
+//TODO:
 // convert sort to median function
-// scale present boolean usage
-// empty bowl vs nonideal bowl weight vs ideal bowl
-// handle bowl being removed aka error state, perfect weight, low food in appropriate threshold
-// ISSUE: MOTOR ONLY SPINS 1ST TIME
+// clean up code
 
 // EMPTY BOWL = 44 GRAMS
 
@@ -26,7 +23,7 @@ preamble {=
     #include <math.h>
 
     // change into median function
-    static void sort(int *arr, int n) {
+    static int get_median(int *arr, int n) {
         for (int i = 1; i < n; i++) {
             int key = arr[i];
             int j = i - 1;
@@ -37,6 +34,7 @@ preamble {=
             }
             arr[j + 1] = key;
         }
+        return raw_vals[5];
     }
 =}
 
@@ -51,8 +49,8 @@ reactor LoadCell{
     state bowl_state: int;
     state bowl_weight: double;
     // calibration states
-    state calibrated: bool;//init?
-    state offset: double;// init?
+    state calibrated: bool;
+    state offset: double;
     state scale: double;
 
     output weight: double; //grams
@@ -77,17 +75,12 @@ reactor LoadCell{
         
         // reset hx711
         reset(&self->hx);
-        //printf("hx711 reset done\n");
 
-        //or use median func
         // zero scale
         err = zeroScale(&self->hx);
         if (err) {
             printf("FAILURE: zero scale\n");
         } 
-        //printf("exiting startup\n~~~~~~~~~~~~~~~~\n");
-        //set init weight to measured
-        //lf_set(weight, 0.0);
     =}
 
     reaction(t)->weight, low_food, error_state {=
@@ -111,7 +104,7 @@ reactor LoadCell{
         }
 
         // sort samples
-        sort(raw_vals, 10);
+        int raw_median = get_median(raw_vals, 10);
         // median value
         int raw_median = raw_vals[5];
         //printf("\nRAW MEDIAN: %d\n\n", raw_median);

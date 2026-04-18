@@ -6,6 +6,10 @@ import StepperMotor from "lib/motor.lf";
 import LoadCell from "lib/loadcell.lf";
 //using boolean from loadcell, spin motor or leave be
 
+//TODO: add error timeout
+// potentially add interactive goal weight?
+
+
 //email notif of feeding?
 main reactor{
 

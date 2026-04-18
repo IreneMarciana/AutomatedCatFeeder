@@ -13,6 +13,11 @@ preamble {=
     #include <stdio.h>      //printf()
     #include <stdlib.h>     //exit()
 =}
+//TODO: debug error mode + cool down
+// debug what is stop doing
+// clean up code
+
+
 //modal
 // error signal + error mode.. timeout back to idle
 //idle, dispense, error
