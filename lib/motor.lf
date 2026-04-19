@@ -27,9 +27,7 @@ reactor StepperMotor{
     input stop: bool;
     timer cool_down(1 sec, 60 sec);
 
-    state entered: bool = false;
-    state cooldown_counter: int = 0;
-
+    state cooldown_counter: int;
     output cooldown_done: bool;
 
 
@@ -70,11 +68,11 @@ reactor StepperMotor{
             HR8825_Stop();
         =}
         reaction(stop)->reset(ERROR) {=
-        if (stop->value) {
-            printf("ERROR: stop received during DISPENSE.\n");
-            lf_set_mode(ERROR);
-        }
-    =}
+            if (stop->value) {
+                printf("ERROR: stop received during DISPENSE.\n");
+                lf_set_mode(ERROR);
+            }
+        =}
     }
 
     mode ERROR {
@@ -85,7 +83,7 @@ reactor StepperMotor{
             HR8825_Stop();
             DEV_ModuleExit();
 
-            self->cooldown_counter = 5;   // 60 seconds
+            self->cooldown_counter = 5;   
         =}
 
         reaction(cool_down)->reset(IDLE), cooldown_done {=
