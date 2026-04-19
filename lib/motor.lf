@@ -28,6 +28,7 @@ reactor StepperMotor{
     timer cool_down(1 sec, 60 sec);
 
     state entered: bool = false;
+    state cooldown_counter: int = 0;
 
     initial mode IDLE {
         // case 1: weight under threshold, run is true + dispense
@@ -80,14 +81,19 @@ reactor StepperMotor{
             HR8825_SelectMotor(MOTOR2);
             HR8825_Stop();
             DEV_ModuleExit();
-            self->entered = true;
+
+            self->cooldown_counter = 60;   // 60 seconds
         =}
 
         reaction(cool_down)->reset(IDLE) {=
-            if (self->entered) {
+            if (self->cooldown_counter > 0) {
+                self->cooldown_counter--;
+                printf("Cooldown: %d\n", self->cooldown_counter);
+            }
+
+            if (self->cooldown_counter == 0) {
                 printf("Cool down done → IDLE\n");
                 lf_set_mode(IDLE);
-                self->entered = false;
             }
         =}
     }

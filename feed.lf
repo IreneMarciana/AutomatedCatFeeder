@@ -15,6 +15,7 @@ main reactor{
 
     state run: bool = false;
     state prev_error: bool = false;
+    state error_count: int = 0;
 
     timer error_timeout(1 sec, 10 sec);
     timer test_timer(1 sec, 2 sec);
@@ -41,11 +42,17 @@ main reactor{
     reaction(loadcell.error_state)-> motor.stop {=
         bool curr = loadcell.error_state->value;
 
-        if (curr && !self->prev_error) {
-            printf("\nERROR STATE\n");
-            lf_set(motor.stop, true);
+        if (curr) {
+            self->error_count++;
+        } else {
+            self->error_count = 0;
         }
-        self->prev_error = curr;
+
+        if (self->error_count >= 5) {
+            printf("\nERROR: 5 consecutive failures\n");
+            lf_set(motor.stop, true);
+            self->error_count = 0;  // reset after triggering
+        }
     
     =}
 
