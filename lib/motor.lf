@@ -88,7 +88,7 @@ reactor StepperMotor{
             self->cooldown_counter = 5;   // 60 seconds
         =}
 
-        reaction(cool_down)->reset(IDLE) {=
+        reaction(cool_down)->reset(IDLE), cooldown_done {=
             if (self->cooldown_counter > 0) {
                 self->cooldown_counter--;
                 printf("Cooldown: %d\n", self->cooldown_counter);
