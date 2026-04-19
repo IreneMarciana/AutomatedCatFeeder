@@ -94,8 +94,8 @@ reactor StepperMotor{
 
             if (self->cooldown_counter == 0) {
                 printf("Cool down done → IDLE\n");
-                lf_set_mode(IDLE);
                 lf_set(cooldown_done, true);
+                lf_set_mode(IDLE);
             }
         =}
     }
