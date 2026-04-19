@@ -59,6 +59,7 @@ main reactor{
             self->error_count = 0;
 
             self->in_cooldown = true;
+            lf_set(loadcell.in_cooldown, true); 
         }
     
     =}
@@ -66,6 +67,8 @@ main reactor{
     reaction(motor.cooldown_done) {=
         printf("Main: cooldown complete\n");
         self->in_cooldown = false;
+
+        lf_set(loadcell.in_cooldown, false);
     =}
 
     reaction(shutdown){=
