@@ -13,7 +13,9 @@ import LoadCell from "lib/loadcell.lf";
 //email notif of feeding?
 main reactor{
 
-    state run: bool = false
+    state run: bool = false;
+    state prev_error: bool = false;
+
     timer error_timeout(1 sec, 10 sec);
     timer test_timer(1 sec, 2 sec);
 
@@ -37,10 +39,13 @@ main reactor{
     =}
 
     reaction(loadcell.error_state)-> motor.stop {=
-        if (loadcell.error_state->value){
-            printf("\ERROR STATE\n");
+        bool curr = loadcell.error_state->value;
+
+        if (curr && !self->prev_error) {
+            printf("\nERROR STATE\n");
             lf_set(motor.stop, true);
         }
+        self->prev_error = curr;
     
     =}
 

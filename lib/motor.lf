@@ -27,6 +27,8 @@ reactor StepperMotor{
     input stop: bool;
     timer cool_down(1 sec, 60 sec);
 
+    state entered: bool = false;
+
     initial mode IDLE {
         // case 1: weight under threshold, run is true + dispense
         reaction(run)->reset(DISPENSE){=
@@ -40,7 +42,7 @@ reactor StepperMotor{
         // case 3: weight under threshold, run is false + error
         reaction(stop)->reset(ERROR){=
             if (stop->value){
-                printf("ERROR: stop signal received.\n"); 
+                printf("ERROR: stop signal received during IDLE.\n"); 
                 lf_set_mode(ERROR);
             }
         =}
@@ -63,19 +65,30 @@ reactor StepperMotor{
             HR8825_TurnStep(BACKWARD, 6144, 1);
             HR8825_Stop();
         =}
+        reaction(stop)->reset(ERROR) {=
+        if (stop->value) {
+            printf("ERROR: stop received during DISPENSE.\n");
+            lf_set_mode(ERROR);
+        }
+    =}
     }
 
     mode ERROR {
         reaction(startup) {=
+            printf("Entered ERROR mode\n");
             printf("ERROR: weight index out of range; shutting down.\n"); 
             HR8825_SelectMotor(MOTOR2);
             HR8825_Stop();
             DEV_ModuleExit();
-            //stop = false; 
+            self->entered = true;
         =}
-        reaction (cool_down)-> reset(IDLE) {=
-            printf("Cool down period is over; returning to idle mode.\n"); 
-            lf_set_mode(IDLE);
+
+        reaction(cool_down)->reset(IDLE) {=
+            if (self->entered) {
+                printf("Cool down done → IDLE\n");
+                lf_set_mode(IDLE);
+                self->entered = false;
+            }
         =}
     }
 
