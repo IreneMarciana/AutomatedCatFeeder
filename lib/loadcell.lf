@@ -46,7 +46,6 @@ reactor LoadCell{
     state hx: HX711; 
 
     state scale_init: bool;
-    state bowl_state: int;
     state bowl_weight: double;
     // calibration states
     state calibrated: bool;
@@ -155,7 +154,7 @@ reactor LoadCell{
                     lf_set(low_food, false);
                     lf_set(error_state, false);
                     self->num_errors--;
-                    printf("cooldown period %f\n", self->num_errors);
+                    printf("cooldown period %d\n", self->num_errors);
                     return;
                 }
                 else if(self->num_errors==0){
