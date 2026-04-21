@@ -29,7 +29,7 @@ main reactor{
     reaction(loadcell.low_food)-> motor.run {=
         printf("\n---\n");
 
-        if (loadcell.low_food->value) {
+        if (!self->cooldown_active && loadcell.low_food->value) {
             printf("Low food detected! Spinning motor...\n");
             lf_set(motor.run, true);
         }
@@ -41,7 +41,7 @@ main reactor{
 
             self->cooldown_active = true;
 
-            lf_schedule(cooldown_timer, 10 sec);
+            lf_schedule(cooldown_timer, SEC(10));
         }
     =}
 
