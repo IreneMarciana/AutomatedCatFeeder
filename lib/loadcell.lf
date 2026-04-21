@@ -155,7 +155,6 @@ reactor LoadCell{
                 printf("LOADCELL CASE 2: Low food\n");
                 lf_set(error_state, false);
                 lf_set(low_food, true);
-                lf_set(low_food, false);//added
             }
             else if (food>=50 && food<=60){
                 //perfect food
