@@ -25,10 +25,8 @@ reactor StepperMotor{
 
     input run: bool;
     input stop: bool;
-    timer cool_down(1 sec, 60 sec);
-
-    state cooldown_counter: int;
-    output cooldown_done: bool;
+    
+    // cool down timer?
 
 
     initial mode IDLE {
@@ -82,21 +80,6 @@ reactor StepperMotor{
             HR8825_SelectMotor(MOTOR2);
             HR8825_Stop();
             DEV_ModuleExit();
-
-            self->cooldown_counter = 5;   
-        =}
-
-        reaction(cool_down)->reset(IDLE), cooldown_done {=
-            if (self->cooldown_counter > 0) {
-                self->cooldown_counter--;
-                printf("Cooldown: %d\n", self->cooldown_counter);
-            }
-
-            if (self->cooldown_counter == 0) {
-                printf("Cool down done → IDLE\n");
-                lf_set(cooldown_done, true);
-                lf_set_mode(IDLE);
-            }
         =}
     }
 

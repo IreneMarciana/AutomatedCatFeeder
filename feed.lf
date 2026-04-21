@@ -18,57 +18,24 @@ main reactor{
     state error_count: int = 0;
     state in_cooldown: bool = false;
 
-    timer error_timeout(1 sec, 10 sec);
-    timer test_timer(1 sec, 2 sec);
+    //timer error_timeout(1 sec, 10 sec);
+    //timer test_timer(1 sec, 2 sec);
 
     motor = new StepperMotor();
     loadcell = new LoadCell();
     //balance = new LoadCell(clock_pin = 6, data_pin = 5)
     
     reaction(startup){=
-
         printf("Starting main reactor!\n");
     =}
 
     reaction(loadcell.low_food)-> motor.run {=
         printf("\n---\n");
 
-        if (self->in_cooldown) {
-            printf("Cooldown active → ignoring low food\n");
-            return;
-        }
-
         if (loadcell.low_food->value) {
             printf("Low food detected! Spinning motor...\n");
             lf_set(motor.run, true);
         }
-    =}
-
-    reaction(loadcell.error_state)-> motor.stop {=
-        bool curr = loadcell.error_state->value;
-
-        if (curr) {
-            self->error_count++;
-        } else {
-            self->error_count = 0;
-        }
-
-        if (self->error_count >= 5) {
-            printf("\nERROR: 5 consecutive failures\n");
-            lf_set(motor.stop, true);
-            self->error_count = 0;
-
-            self->in_cooldown = true;
-            lf_set(loadcell.in_cooldown, true); 
-        }
-    
-    =}
-
-    reaction(motor.cooldown_done) {=
-        printf("Main: cooldown complete\n");
-        self->in_cooldown = false;
-
-        lf_set(loadcell.in_cooldown, false);
     =}
 
     reaction(shutdown){=
