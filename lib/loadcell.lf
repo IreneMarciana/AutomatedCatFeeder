@@ -58,6 +58,7 @@ reactor LoadCell{
     state in_cooldown: bool = false;
     logical action cooldown_end;
     output cooldown: bool;
+    state in_a_row: bool;
 
 
     output weight: double; //grams
@@ -153,7 +154,7 @@ reactor LoadCell{
         if (self->calibrated) {
 
             //added
-            if (self->num_errors >= 5) {
+            if (self->num_errors >= 5 && self->in_a_row==true) {
                 printf("WARNING: 5 invalid measurements. Entering 10-second cooldown.\n");
 
                 self->num_errors = 0;
@@ -162,6 +163,7 @@ reactor LoadCell{
                 lf_set(cooldown, true);
                 lf_set(low_food, false);
                 lf_set(error_state, true);
+                lf_set(in_a_row, false);
 
                 lf_schedule(cooldown_end, SEC(10));
                 return;
@@ -204,18 +206,20 @@ reactor LoadCell{
                 printf("LOADCELL CASE 1: Ideal weight\n");
                 lf_set(error_state, false);
                 lf_set(low_food, false);
+                lf_set(in_a_row, false);
             }
             else if(food<50 && food >=0){
                 printf("LOADCELL CASE 2: Low food\n");
                 lf_set(error_state, false);
                 lf_set(low_food, true);
+                lf_set(in_a_row, false);
             }
             else if (food>60 || food <0){
                 printf("LOADCELL CASE 3: Oddly high or low\n");
                 self->num_errors++;
                 lf_set(error_state, true);
                 lf_set(low_food, false);
-
+                lf_set(in_a_row, true);
             }
         }
     =}
@@ -224,6 +228,7 @@ reactor LoadCell{
         printf("Cooldown complete. Resuming measurements.\n");
         self->in_cooldown = false;
         lf_set(cooldown, false);
+        lf_set(in_a_row, false);
     =}
 
     reaction(shutdown)  {=
