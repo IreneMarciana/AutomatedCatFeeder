@@ -38,4 +38,6 @@ To be done:
 - demo
 - usage
 // TODO: potentially add interactive goal weight? email notif of feeding, take picture
+//TODO:
+// (1) potentially change pin input logic
 

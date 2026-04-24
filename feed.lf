@@ -24,7 +24,7 @@ main reactor{
 
     reaction(loadcell.low_food)-> motor.run {=
         if (loadcell.low_food->value) {
-            printf("Low food detected-> spinning motor!\n");
+            printf("Low food detected: ");
             lf_set(motor.run, true);
         }
 
