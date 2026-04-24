@@ -107,7 +107,7 @@ void HR8825_SetMicroStep(char mode, const char *stepformat)
         }
         str++;
     }
-    printf("MicroStep = %s\r\n", Motor.MicroStep);
+    //printf("MicroStep = %s\r\n", Motor.MicroStep);
     if(i == 6) {
         DEBUG("The stepformat must be : \"fullstep\",\"halfstep\",\"1/4step\",\"1/8step\",\"1/16step\",\"1/32step\"\r\n");
         exit(0);

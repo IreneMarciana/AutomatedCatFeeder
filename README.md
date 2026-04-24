@@ -37,4 +37,5 @@ To be done:
 - software(mod bcm + hx711 changes)
 - demo
 - usage
+// TODO: potentially add interactive goal weight? email notif of feeding, take picture
 

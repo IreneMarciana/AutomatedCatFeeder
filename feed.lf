@@ -4,41 +4,34 @@ target C{
 }
 import StepperMotor from "lib/motor.lf";
 import LoadCell from "lib/loadcell.lf";
-//using boolean from loadcell, spin motor or leave be
 
-//TODO: add error timeout
-// potentially add interactive goal weight?
-
-
-//email notif of feeding?
 main reactor{
 
     state run: bool = false;
 
-    //state cooldown_active: bool = false;
-    //logical action cooldown_timer;
-
     motor = new StepperMotor();
     loadcell = new LoadCell();
-    //balance = new LoadCell(clock_pin = 6, data_pin = 5)
     
     reaction(startup){=
-        printf("Starting main reactor!\n");
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        printf("Welcome to automated cat feeder!\nWe will be using 50-60 grams as the ideal food weight threshold and pins 5 for data and 6 for clock.\n");
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        printf(" /\\_/\\\n");
+        printf("( o.o )\n");
+        printf(" > ^ <\n");
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
     =}
 
     reaction(loadcell.low_food)-> motor.run {=
-        printf("\n---\n");
-
         if (loadcell.low_food->value) {
-            printf("Low food detected! Spinning motor...\n");
+            printf("Low food detected-> spinning motor!\n");
             lf_set(motor.run, true);
         }
 
     =}
 
-    reaction(shutdown){=
-        printf("Shutting down main reactor!\n");
-    =}
+    /*printf(" /\\_/\\\n");
+        printf("( -.- )\n");*/
 
 
 }

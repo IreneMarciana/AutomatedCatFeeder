@@ -13,7 +13,7 @@ preamble {=
     #include <stdio.h>      //printf()
     #include <stdlib.h>     //exit()
 =}
-//TODO: debug error mode + cool down
+//TODO:
 // debug what is stop doing
 // clean up code
 
@@ -25,9 +25,6 @@ reactor StepperMotor{
 
     input run: bool;
     input stop: bool;
-    
-    // cool down timer?
-
 
     initial mode IDLE {
         // case 1: weight under threshold, run is true + dispense
@@ -56,7 +53,6 @@ reactor StepperMotor{
                 printf("Exiting; failed to init.\n"); 
                 exit(0);
             }
-            // Exception handling:ctrl + c
             //signal(SIGINT, Handler);
             HR8825_SelectMotor(MOTOR2);
             // fullstep -> 1/32step
