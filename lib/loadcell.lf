@@ -1,6 +1,7 @@
 target C{
     single-threaded: true,
     keepalive:true,
+    fast: false,
     cmake-include: ["../c_lib/hx711/scale.cmake"],
     files: ["../c_lib/hx711/gb_common.c", "../c_lib/hx711/gb_common.h", "../c_lib/hx711/hx711.c", 
             "../c_lib/hx711/hx711.h"]
@@ -191,7 +192,7 @@ reactor LoadCell{
     =}
 
     reaction(cooldown_end) -> cooldown {=
-        printf("Cooldown complete. Resuming measurements.\n");
+        printf("\nCOOLDOWN complete: resuming measurements\n");
         self->in_cooldown = false;
         lf_set(cooldown, false);
     =}
