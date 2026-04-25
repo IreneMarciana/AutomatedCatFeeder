@@ -80,7 +80,7 @@ reactor LoadCell{
     reaction(t)->weight, low_food, error_state, cooldown, cooldown_end {=
         //measurement skip from cooldown check
         if (self->in_cooldown) {
-            printf("~~~ In cooldown-> skipping measurement ~~~\n");
+            printf("~~~ COOLDOWN: skipping measurement ~~~\n");
             lf_set(low_food, false);
             lf_set(error_state, false);
             lf_set(cooldown, true);
@@ -115,13 +115,13 @@ reactor LoadCell{
             self->scale_init = true;
             return;
         }
-        printf("Please place empty bowl on scale.\n");
-        printf(" ╭─────────╮\n");
-        printf(" ╰╮       ╭╯\n");
-        printf("  ╰───────╯\n");
+        
         // 1 is scale w/ bowl
         if (self->scale_init== true && !self->calibrated) {
-            printf("Waiting for bowl...\n\n");
+            printf("Please place empty bowl on scale.\n");
+            printf(" ╭─────────╮\n");
+            printf(" ╰╮       ╭╯\n");
+            printf("  ╰───────╯\n\n");
             // recalibrate bowl
             if (raw_median > self->offset + 10000) {
                 double delta = raw_median - self->offset;
