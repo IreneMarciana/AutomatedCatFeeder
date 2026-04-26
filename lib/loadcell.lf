@@ -54,7 +54,7 @@ reactor LoadCell{
     //timer t (1 sec, 2 sec);
     logical action sample;
     
-    reaction(startup)->weight{=
+    reaction(startup)->weight, sample{=
         // set process priority
         int err = setPriority(10);
         if (err) {
@@ -79,7 +79,7 @@ reactor LoadCell{
     =}
 
 
-    reaction(sample)->weight, low_food, cooldown, cooldown_end {=
+    reaction(sample)->weight, low_food, cooldown, cooldown_end, sample {=
         //measurement skip from cooldown check
         if (self->in_cooldown) {
             printf("~~~ COOLDOWN: skipping measurement ~~~\n");
