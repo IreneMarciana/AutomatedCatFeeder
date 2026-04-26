@@ -80,15 +80,15 @@ To ensure real-time safety and hardware stability on the ARM-based Raspberry Pi,
 ### Components(Reactors)
 <table>
   <tr>
-    <td> <img src="assets/feed.png" alt="Feed Reactor" width="400"></td>
+    <td> <img src="assets/feed.png" alt="Feed Reactor" width="800"></td>
     <td> <strong><a href="feed.lf">feed.lf</a></strong>: The main reactor that instantiates the motor and loadcell components. It controls the startup sequence, prints the terminal interface, and acts as the central hub by routing the <code>low_food</code> signal from the scale to trigger the motor's dispensing logic.</td>
   </tr>
   <tr>
-    <td> <img src="assets/motor.png" alt="Motor Reactor" width="400"></td>
+    <td> <img src="assets/motor.png" alt="Motor Reactor" width="800"></td>
     <td> <strong><a href="lib/motor.lf">motor.lf</a></strong>: Manages the physical food dispensing mechanism. It uses a modal model to switch between <code>IDLE</code> and <code>DISPENSE</code> states, activating the HR8825 stepper motor driver to rotate a specific number of steps when commanded to feed.</td>
   </tr>
   <tr>
-    <td> <img src="assets/loadcell.png" alt="Loadcell Reactor" width="400"></td>
+    <td> <img src="assets/loadcell.png" alt="Loadcell Reactor" width="800"></td>
     <td> <strong><a href="lib/loadcell.lf">loadcell.lf</a></strong>: Handles the HX711 scale sensor. It takes median-filtered weight samples every two seconds, manages interactive startup calibration, evaluates the food level against ideal thresholds (50-60g), and enforces a 10-second safety cooldown if it detects anomalous readings.</td>
   </tr>
 </table>
