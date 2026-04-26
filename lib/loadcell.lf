@@ -101,7 +101,7 @@ reactor LoadCell{
         int raw_vals[10];
         for (int i = 0; i < 10; i++) {
             raw_vals[i] = getRawData(&self->hx);
-            usleep(5000);
+            usleep(5000);//10000
         }
 
         // median

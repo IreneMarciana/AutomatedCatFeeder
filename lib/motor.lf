@@ -22,7 +22,6 @@ reactor StepperMotor{
         reaction(run)->reset(DISPENSE){=
             // weight under threshold, run is true + dispense
             if(run->value){
-                printf("DISPENSE MODE\n"); 
                 lf_set_mode(DISPENSE);
             }
             // else, ideal weight, can remain idle
