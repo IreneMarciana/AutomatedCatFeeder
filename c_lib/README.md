@@ -1,13 +1,13 @@
-<h3 align="center">
+<h1 align="center">
   <br>
     C Libraries Used Overview
   <br>
-</h3>
+</h1>
 
 ## bcm2835
-Debug, DEV_config, and HR8825 are from the [bcm2835 Library](https://www.waveshare.com/wiki/Stepper_Motor_HAT_(B)#BCM2835) from Waveshare for the Stepper Motor Hat B.
+Debug, DEV_config, and HR8825 are from the [waveshare/bcm2835 Library](https://www.waveshare.com/wiki/Stepper_Motor_HAT_(B)#BCM2835) from Waveshare for the Stepper Motor Hat B.
 
-bcm2835 is from another [bcm2835 Library](https://www.airspayce.com/mikem/bcm2835/). This was only included to facilitate compilation on Ubuntu 24 on Github, since the library used for the stepper motor is Raspberry Pi specific.
+bcm2835 is from another [mikem/bcm2835 Library](https://www.airspayce.com/mikem/bcm2835/). This was only included to facilitate compilation on Ubuntu 24 on Github, since the library used for the stepper motor is Raspberry Pi specific.
 
 - **Debug**: Debug printing statements structure defined.
 - **DEV_config**: Handles pin setup and timing delays for the stepper motor hardware. 
