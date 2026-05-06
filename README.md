@@ -1,12 +1,17 @@
 <h1 align="center">
   <br>
-    Automated Cat Feeder
+  Automated Cat Feeder
   <br>
 </h1>
 
-<h4 align="center">A weight-sensing pet feeder built with <a href="https://www.lf-lang.org/" target="_blank">Lingua Franca</a>.</h4>
-<td> <img src="assets/cat_feeder.png" width="800"></td>
+<h4 align="center">
+  A weight-sensing pet feeder built with 
+  <a href="https://www.lf-lang.org/" target="_blank">Lingua Franca</a>.
+</h4>
 
+<p align="center">
+  <img src="assets/cat_feeder.png" width="400">
+</p>
 
 
 ---
