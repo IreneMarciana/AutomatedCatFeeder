@@ -44,7 +44,7 @@ reactor LoadCell {
 
   state num_errors: int = 0  // cooldown variables
   state in_cooldown: bool = false
-  physical action cooldown_end
+  logical action cooldown_end
   //output cooldown: bool
 
   // feed.lf outputs
