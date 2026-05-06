@@ -57,6 +57,7 @@ reactor StepperMotor {
     =}
 
     reaction(stop)-> IDLE{=
+      HR8825_SelectMotor(MOTOR2);
       HR8825_Stop();
       //printf("\nSTOPPING DISPENSE\n");
     =}
