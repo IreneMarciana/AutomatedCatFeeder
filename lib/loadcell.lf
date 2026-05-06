@@ -1,6 +1,6 @@
 target C {
   single-threaded: true,
-  //keepalive: true,
+  keepalive: true,
   cmake-include: ["../c_lib/hx711/scale.cmake"],
   files: [
       "../c_lib/hx711/gb_common.c",
