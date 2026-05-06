@@ -81,7 +81,7 @@ reactor LoadCell {
         lf_set(low_food, false);
         return;
     }
-
+//maybe move up
     // 1) raw value read
     // wait for pin to go low
     int wait_count = 0;
